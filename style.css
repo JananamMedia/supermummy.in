@@ -328,6 +328,13 @@ blockquote {
   padding: 2.5rem;
   border: 1px solid rgba(26, 10, 16, 0.06);
   transition: box-shadow 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.door .btn {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .door:hover {
