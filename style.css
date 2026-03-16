@@ -876,3 +876,43 @@ body.hindi .whatsapp-section h2,
 body.hindi .whatsapp-section p {
   font-family: 'Baloo 2', sans-serif;
 }
+/* Saveable image grid */
+.saveable-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.saveable-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: var(--white);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.saveable-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+}
+
+.saveable-card img {
+  width: 100%;
+  display: block;
+}
+
+.saveable-label {
+  padding: 0.7rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark);
+  font-family: var(--font-display);
+}
+
+/* Stat note — small line under stat label */
+.stat-note {
+  font-size: 0.75rem;
+  color: var(--grey-light);
+  margin-top: 0.2rem;
+  font-family: var(--font-display);
+}
