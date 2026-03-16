@@ -916,3 +916,14 @@ body.hindi .whatsapp-section p {
   margin-top: 0.2rem;
   font-family: var(--font-display);
 }
+@media (max-width: 640px) {
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .stat {
+    padding: 1rem 0.5rem;
+  }
+}
