@@ -8,12 +8,12 @@
 const SM = {
 
   // --- Channel Numbers (update monthly) ---
-  totalViews:       '10.4 करोड़+',
-  totalViewsEn:     '10.4 Crore+',
+  totalViews:       '10.6 करोड़+',
+  totalViewsEn:     '10.6 Crore+',
   monthlyViews:     '1.09 करोड़',
   monthlyViewsEn:   '1.09 Crore',
-  subscribers:      '1.47 लाख',
-  subscribersEn:    '1.47 Lakh',
+  subscribers:      '1.49 लाख',
+  subscribersEn:    '1.49 Lakh',
   totalVideos:      '900+',
   yearsActive:      '8',
   peakDay:          '4.66 लाख',
@@ -21,6 +21,7 @@ const SM = {
   peakDayDate:      'March 9, 2026',
   annualRunRate:    '14.3 crore views/year',
   lastUpdated:      'March 2026',
+  lastUpdatedHi:    'मार्च 2026',
 
   // --- Growth Chart Data (annual views in crores) ---
   // Used on the Work With Us page hockey-stick chart
