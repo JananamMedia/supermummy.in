@@ -90,27 +90,27 @@
         <div class="stats">
 
           <div class="stat">
-            <div class="stat-number">10.6 करोड़+</div>
+            <div class="stat-number" data-field="totalViews"></div>
             <div class="stat-label">बार देखा गया</div>
-            <div class="stat-note">मार्च 2026 तक</div>
+            <div class="stat-note" data-note="lastUpdatedHi" data-suffix=" तक"></div>
           </div>
 
           <div class="stat">
-            <div class="stat-number">900+</div>
+            <div class="stat-number" data-field="totalVideos"></div>
             <div class="stat-label">वीडियो</div>
             <div class="stat-note">और बढ़ते जा रहे हैं</div>
           </div>
 
           <div class="stat">
-            <div class="stat-number">8 साल</div>
+            <div class="stat-number" data-field="yearsActive" data-suffix=" साल"></div>
             <div class="stat-label">से डॉक्टर-verified</div>
             <div class="stat-note">2016 से लगातार</div>
           </div>
 
           <div class="stat">
-            <div class="stat-number">1.49 लाख</div>
+            <div class="stat-number" data-field="subscribers"></div>
             <div class="stat-label">subscribers</div>
-            <div class="stat-note">मार्च 2026 तक</div>
+            <div class="stat-note" data-note="lastUpdatedHi" data-suffix=" तक"></div>
           </div>
 
         </div>
@@ -122,7 +122,9 @@
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 0.4rem;">सबसे ज़्यादा देखे गए वीडियो</h2>
         <p style="text-align: center; color: var(--grey); margin-bottom: 0.3rem;">डॉक्टर-verified। हमेशा मुफ़्त।</p>
-        <p style="text-align: center; color: var(--grey); font-size: 0.85rem; margin-bottom: 2rem;">views — मार्च 2026 तक</p>
+        <p class="stat-note" style="text-align: center; margin-bottom: 2rem;">
+          views — <span data-field="lastUpdatedHi"></span> तक
+        </p>
 
         <div class="video-grid" id="video-grid-top"></div>
 
@@ -262,9 +264,29 @@
   <script>
     document.addEventListener('DOMContentLoaded', function () {
 
-      // Top 3 videos only
+      if (typeof SM === 'undefined') return;
+
+      // --- Populate stat numbers ---
+      document.querySelectorAll('[data-field]').forEach(function (el) {
+        var key = el.getAttribute('data-field');
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (SM[key] !== undefined) {
+          el.textContent = SM[key] + suffix;
+        }
+      });
+
+      // --- Populate stat notes with date ---
+      document.querySelectorAll('[data-note]').forEach(function (el) {
+        var key = el.getAttribute('data-note');
+        var suffix = el.getAttribute('data-suffix') || '';
+        if (SM[key] !== undefined) {
+          el.textContent = SM[key] + suffix;
+        }
+      });
+
+      // --- Top 3 videos ---
       var grid = document.getElementById('video-grid-top');
-      if (grid && typeof SM !== 'undefined' && SM.topVideos) {
+      if (grid && SM.topVideos) {
         SM.topVideos.slice(0, 3).forEach(function (video) {
           var match = video.url.match(/[?&]v=([^&]+)/);
           var videoId = match ? match[1] : '';
@@ -286,8 +308,8 @@
         });
       }
 
-      // WhatsApp links when Sakhi launches
-      if (typeof SM !== 'undefined' && SM.whatsapp && SM.whatsapp !== '#') {
+      // --- WhatsApp links when Sakhi launches ---
+      if (SM.whatsapp && SM.whatsapp !== '#') {
         document.querySelectorAll('#whatsapp-cta').forEach(function (el) {
           el.href = SM.whatsapp;
         });
