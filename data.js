@@ -14,8 +14,8 @@ const SM = {
   monthlyViewsEn:   '1.09 Crore',
   subscribers:      '1.47 लाख',
   subscribersEn:    '1.47 Lakh',
-  totalVideos:      '984+',
-  yearsActive:      '7',
+  totalVideos:      '900+',
+  yearsActive:      '8',
   peakDay:          '4.66 लाख',
   peakDayEn:        '4.66 Lakh',
   peakDayDate:      'March 9, 2026',
@@ -39,7 +39,7 @@ const SM = {
   // --- Market Data (sourced — do not approximate) ---
   annualPregnancies:     '2.9 crore (29 million)',
   specialistVacancy:     '70%',
-  reliableVideos:        '15.3%',  // changed to 15% on display for readability
+  reliableVideos:        '15.3%',
   hindiSpeakers:         '600 million',
   dailyPregnancies:      '~80,000',
 
@@ -77,7 +77,7 @@ const SM = {
   youtube:    'https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g',
   facebook:   'https://www.facebook.com/share/1888aEXNYU/',
   instagram:  '#',  // placeholder — add handle when ready
-  linkedin:   '#',  // placeholder — add Chanda's LinkedIn URL
+  linkedin:   'https://www.linkedin.com/in/chandachaudhary/',
   jananam:    'https://jananam.co',
   email:      'chanda@jananam.co',
   whatsapp:   '#',  // placeholder — add WhatsApp Sakhi link when ready
