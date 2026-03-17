@@ -9,11 +9,10 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="SuperMummy — India's Leading Hindi Pregnancy Health Channel">
-  <meta property="og:description" content="900+ doctor-verified pregnancy health videos in Hindi. 10.4 crore+ views. Free, always.">
+  <meta property="og:description" content="900+ doctor-verified pregnancy health videos in Hindi. 10.6 crore+ views. Free, always.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://supermummy.in">
   <meta property="og:site_name" content="SuperMummy">
-  <!-- <meta property="og:image" content="https://supermummy.in/og-image.jpg"> -->
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -27,6 +26,200 @@
 
   <link rel="stylesheet" href="style.css">
   <script src="data.js" defer></script>
+
+  <style>
+    /* --- About page specific styles --- */
+
+    .about-lede {
+      padding-top: calc(var(--nav-height) + var(--section-pad));
+      padding-bottom: var(--section-pad);
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .about-lede-numbers {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      color: var(--grey);
+      letter-spacing: 0.03em;
+      margin-bottom: 0;
+    }
+
+    .about-lede-numbers span {
+      color: var(--pink);
+      font-weight: 700;
+    }
+
+    .about-lede-numbers .divider {
+      color: var(--grey-light);
+      margin: 0 0.6rem;
+    }
+
+    .her-bharat {
+      background: var(--dark);
+      padding: var(--section-pad) 0;
+      text-align: center;
+    }
+
+    .her-bharat-eyebrow {
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pink-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .her-bharat-stat {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+
+    .her-bharat-stat span {
+      color: var(--pink-light);
+    }
+
+    .her-bharat-name {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--pink-light);
+      margin-bottom: 1.5rem;
+    }
+
+    .her-bharat-cities {
+      font-family: var(--font-body);
+      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+      color: var(--grey-light);
+      line-height: 2;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .her-bharat-truth {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      color: var(--white);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    .her-bharat-truth em {
+      color: var(--pink-light);
+      font-style: normal;
+    }
+
+    .founder-block {
+      background: var(--white);
+      padding: var(--section-pad) 0;
+    }
+
+    .founder-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .founder-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: var(--cream-dark);
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .founder-text h3 {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      margin-bottom: 0.25rem;
+    }
+
+    .founder-role {
+      font-size: 0.9rem;
+      color: var(--grey);
+      margin-bottom: 1.25rem;
+    }
+
+    .founder-truth {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: 1.6;
+      color: var(--dark);
+      border-left: 4px solid var(--pink);
+      padding: 1rem 1.25rem;
+      background: rgba(232, 0, 111, 0.03);
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 1.25rem;
+    }
+
+    .founder-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .closing-block {
+      background: var(--cream);
+      padding: var(--section-pad) 0;
+      text-align: center;
+    }
+
+    .closing-block p {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--grey);
+      margin-bottom: 0.5rem;
+    }
+
+    .closing-block .closing-line {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: var(--dark);
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .founder-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .founder-truth {
+        text-align: left;
+      }
+      .founder-links {
+        justify-content: center;
+      }
+      .about-lede-numbers {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        align-items: center;
+      }
+      .about-lede-numbers .divider {
+        display: none;
+      }
+    }
+  </style>
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -63,20 +256,6 @@
     ]
   }
   </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "SuperMummy",
-    "url": "https://supermummy.in",
-    "inLanguage": ["en", "hi"],
-    "publisher": {
-      "@type": "Organization",
-      "name": "Jananam Media Pvt. Ltd."
-    }
-  }
-  </script>
 </head>
 <body>
 
@@ -100,11 +279,18 @@
 
   <main>
 
-    <!-- ===== BLOCK 1: THE FOUNDING WOUND ===== -->
-    <section class="hero section--cream">
-      <div class="container" style="max-width: 800px;">
+    <!-- ===== BLOCK 1: THE NUMBER BEFORE THE STORY ===== -->
+    <section class="about-lede">
+      <div class="container">
+        <p class="about-lede-numbers" id="about-lede-numbers">
+          <!-- Populated by JS below -->
+        </p>
+      </div>
+    </section>
 
-        <p style="font-weight: 600; color: var(--pink); font-size: 1.1rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2rem;">The Story</p>
+    <!-- ===== BLOCK 2: THE FOUNDING WOUND ===== -->
+    <section class="section section--white">
+      <div class="container" style="max-width: 800px;">
 
         <blockquote>
           She didn't die because medicine failed her. She died because no one had told her what to look for.
@@ -119,11 +305,12 @@
         <p>If she had known what postpartum hemorrhage looked like — if anyone in that family had seen one video explaining the warning signs — the outcome might have been different.</p>
 
         <p style="font-weight: 600;">That's when <a href="https://jananam.co" target="_blank" rel="noopener" style="color: var(--dark); text-decoration: underline; text-decoration-color: var(--pink); text-underline-offset: 3px;">Jananam Media</a> and SuperMummy began.</p>
+
       </div>
     </section>
 
-    <!-- ===== BLOCK 2: THE FOUNDING METHOD ===== -->
-    <section class="section section--white">
+    <!-- ===== BLOCK 3: THE FOUNDING METHOD ===== -->
+    <section class="section section--cream">
       <div class="container" style="max-width: 800px;">
 
         <p>Before SuperMummy made a single video, we spent two weeks in the maternity wards of small-town Rajasthan — Ajmer, Alwar, Jhunjhunu. Watching. Listening. Running research groups with pregnant women and their mothers-in-law.</p>
@@ -139,36 +326,72 @@
       </div>
     </section>
 
-    <!-- ===== BLOCK 3: TWO DOORS ===== -->
-    <section class="section section--cream">
+    <!-- ===== BLOCK 4: HER BHARAT ===== -->
+    <section class="her-bharat">
       <div class="container">
 
-        <div class="doors">
+        <p class="her-bharat-eyebrow">The Audience</p>
 
-          <!-- LEFT DOOR -->
-          <div class="door">
-            <p class="door-label">Doctors · Brands · Media · Interested</p>
-            <div class="door-video">
-              <!-- Placeholder: Chanda in English, the story, pointing to opportunity -->
-              Video coming soon — Chanda speaks
-            </div>
-            <p style="font-family: var(--font-display); font-size: 1.05rem;">Ten Crore views+. 1 Crore+ in the last 28 days alone. And a very clear idea of what's coming next.</p>
-            <a href="work-with-us.html" class="btn btn--pink">Work With Us →</a>
+        <p class="her-bharat-stat">
+          64% of our viewers come from towns<br>
+          <span>YouTube doesn't name.</span>
+        </p>
+
+        <p class="her-bharat-name">We call them Her Bharat.</p>
+
+        <p class="her-bharat-cities">
+          Patna. Lucknow. Indore. Agra. Varanasi.<br>
+          And then — beyond the analytics — hundreds of towns<br>that don't appear in any dashboard.
+        </p>
+
+        <p class="her-bharat-truth">
+          This is not an underserved audience.<br>
+          <em>This is the audience.</em>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ===== BLOCK 5: THE FOUNDER ===== -->
+    <section class="founder-block">
+      <div class="container">
+        <div class="founder-inner">
+
+          <div class="founder-photo">
+            <img src="chanda.jpg" alt="Chanda Chaudhary, Founder of SuperMummy and Jananam Media">
           </div>
 
-          <!-- RIGHT DOOR -->
-          <div class="door">
-            <p class="door-label">माँ बनने वाली हैं?</p>
-            <div class="door-video">
-              <!-- Placeholder: Chanda in Hindi, her promise -->
-              वीडियो जल्द आ रहा है — चंदा की बात
+          <div class="founder-text">
+            <h3>Chanda Chaudhary</h3>
+            <p class="founder-role">Founder, Jananam Media Pvt. Ltd.</p>
+
+            <p class="founder-truth">
+              SuperMummy was built by a woman who has never been pregnant. Because sometimes the clearest eyes belong to the witness, not the patient.
+            </p>
+
+            <p style="font-size: 0.95rem; color: var(--dark-soft);">
+              Chanda has spent eight years building the platform she wishes had existed for the woman who didn't survive. She is not difficult to reach.
+            </p>
+
+            <div class="founder-links">
+              <a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn →</a>
+              <a href="mailto:chanda@jananam.co">chanda@jananam.co</a>
             </div>
-            <p style="font-family: var(--font-body); font-weight: 500; font-size: 1.05rem;">900+ वीडियो | हर सवाल का जवाब डॉक्टर दे रहे हैं। हमेशा मुफ़्त।</p>
-            <a href="mummies.html" class="btn btn--pink">अपना पेज देखें →</a>
           </div>
 
         </div>
+      </div>
+    </section>
 
+    <!-- ===== BLOCK 6: CLOSING ===== -->
+    <section class="closing-block">
+      <div class="container">
+        <p>If you're here because someone sent you a link —</p>
+        <p class="closing-line">we're glad you stayed.</p>
+        <p style="font-size: 0.95rem; color: var(--grey); margin-bottom: 2rem; font-family: var(--font-body);">
+          If something on this page made you curious, that curiosity is worth a conversation.
+        </p>
+        <a href="work-with-us.html#contact" class="btn btn--pink">Get In Touch →</a>
       </div>
     </section>
 
@@ -190,6 +413,24 @@
       </ul>
     </div>
   </footer>
+
+  <!-- ===== DATA INJECTION ===== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Populate the lede numbers from data.js
+      const lede = document.getElementById('about-lede-numbers');
+      if (lede && typeof SM !== 'undefined') {
+        lede.innerHTML =
+          '<span>' + SM.totalViewsEn + ' views</span>' +
+          '<span class="divider">·</span>' +
+          '<span>' + SM.totalVideos + ' doctor-verified videos</span>' +
+          '<span class="divider">·</span>' +
+          '<span>' + SM.yearsActive + ' years</span>' +
+          '<span class="divider">·</span>' +
+          'All in Hindi. All free.';
+      }
+    });
+  </script>
 
 </body>
 </html>
