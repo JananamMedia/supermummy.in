@@ -10,6 +10,7 @@ const SM = {
 
   // --- Meta ---
   lastUpdated:          'March 17, 2026',
+  yearFounded:          '2018',
 
   // --- Channel Numbers (update monthly) ---
   totalViews:           '10.6 करोड़+',
@@ -87,7 +88,7 @@ const SM = {
   hindiBeltPct:         '58.0%',
   hindiBeltViews:       '64.45 Lakh',
 
-  // --- Patna + Lucknow Combined (for Work With Us page) ---
+  // --- Patna + Lucknow Combined (for Work With Us + Media Kit) ---
   patnaLucknowViews:    '21.4 Lakh',
 
   // --- India State Breakdown (top states, 28-day) ---
@@ -158,21 +159,21 @@ const SM = {
 
   // --- Top Cities (last 28 days, Feb 16 – Mar 15, 2026) ---
   topCities: [
-    { rank: 1,  city: 'Patna',      state: 'Bihar',       views: '10.99 लाख', viewsExact: 1099432 },
-    { rank: 2,  city: 'Lucknow',    state: 'UP',          views: '10.39 लाख', viewsExact: 1038915 },
-    { rank: 3,  city: 'Indore',     state: 'MP',          views: '5.99 लाख',  viewsExact: 598897  },
-    { rank: 4,  city: 'Agra',       state: 'UP',          views: '5.51 लाख',  viewsExact: 551125  },
-    { rank: 5,  city: 'Delhi',      state: 'Delhi',       views: '4.99 लाख',  viewsExact: 499172  },
-    { rank: 6,  city: 'Jaipur',     state: 'Rajasthan',   views: '3.84 लाख',  viewsExact: 384248  },
-    { rank: 7,  city: 'Pune',       state: 'Maharashtra', views: '3.67 लाख',  viewsExact: 367169  },
-    { rank: 8,  city: 'Ahmedabad',  state: 'Gujarat',     views: '2.95 लाख',  viewsExact: 295022  },
-    { rank: 9,  city: 'Nagpur',     state: 'Maharashtra', views: '1.97 लाख',  viewsExact: 197001  },
-    { rank: 10, city: 'Ludhiana',   state: 'Punjab',      views: '1.96 लाख',  viewsExact: 195662  },
-    { rank: 11, city: 'Mumbai',     state: 'Maharashtra', views: '1.95 लाख',  viewsExact: 195278  },
-    { rank: 12, city: 'Bhopal',     state: 'MP',          views: '1.88 लाख',  viewsExact: 188398  },
-    { rank: 13, city: 'Varanasi',   state: 'UP',          views: '1.75 लाख',  viewsExact: 174648  },
-    { rank: 14, city: 'Bengaluru',  state: 'Karnataka',   views: '1.47 लाख',  viewsExact: 147289  },
-    { rank: 15, city: 'Meerut',     state: 'UP',          views: '1.42 लाख',  viewsExact: 141658  }
+    { rank: 1,  city: 'Patna',      state: 'Bihar',       views: '10.99 Lakh', viewsExact: 1099432 },
+    { rank: 2,  city: 'Lucknow',    state: 'UP',          views: '10.39 Lakh', viewsExact: 1038915 },
+    { rank: 3,  city: 'Indore',     state: 'MP',          views: '5.99 Lakh',  viewsExact: 598897  },
+    { rank: 4,  city: 'Agra',       state: 'UP',          views: '5.51 Lakh',  viewsExact: 551125  },
+    { rank: 5,  city: 'Delhi',      state: 'Delhi',       views: '4.99 Lakh',  viewsExact: 499172  },
+    { rank: 6,  city: 'Jaipur',     state: 'Rajasthan',   views: '3.84 Lakh',  viewsExact: 384248  },
+    { rank: 7,  city: 'Pune',       state: 'Maharashtra', views: '3.67 Lakh',  viewsExact: 367169  },
+    { rank: 8,  city: 'Ahmedabad',  state: 'Gujarat',     views: '2.95 Lakh',  viewsExact: 295022  },
+    { rank: 9,  city: 'Nagpur',     state: 'Maharashtra', views: '1.97 Lakh',  viewsExact: 197001  },
+    { rank: 10, city: 'Ludhiana',   state: 'Punjab',      views: '1.96 Lakh',  viewsExact: 195662  },
+    { rank: 11, city: 'Mumbai',     state: 'Maharashtra', views: '1.95 Lakh',  viewsExact: 195278  },
+    { rank: 12, city: 'Bhopal',     state: 'MP',          views: '1.88 Lakh',  viewsExact: 188398  },
+    { rank: 13, city: 'Varanasi',   state: 'UP',          views: '1.75 Lakh',  viewsExact: 174648  },
+    { rank: 14, city: 'Bengaluru',  state: 'Karnataka',   views: '1.47 Lakh',  viewsExact: 147289  },
+    { rank: 15, city: 'Meerut',     state: 'UP',          views: '1.42 Lakh',  viewsExact: 141658  }
   ],
 
   // --- Top Videos (lifetime views) ---
