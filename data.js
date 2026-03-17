@@ -46,6 +46,7 @@ const SM = {
   searchViewsPct:       '80.4%',
   searchViewsExact:     '9,214,828',
   searchViewsEn:        '9.2 million',
+  searchViewsLakh:      '92 Lakh+',
   searchRetention:      '84.98%',
   searchCTR:            '7.75%',
   searchWatchHours:     '29,991',
@@ -104,24 +105,24 @@ const SM = {
   shortsViews28d:       '11,074,561',
   shortsRPM:            '$0.006',
   shortsAvgRetention:   '106.9%',
-  shortsHighRetCount:   '367',   // Shorts with 70%+ retention
+  shortsHighRetCount:   '367',
 
   // --- Long-form Performance (28-day) ---
   longFormCount:        '77',
-  longFormActiveCount:  '45',    // got views in 28 days with no promotion
+  longFormActiveCount:  '45',
   longFormViewsPct:     '3.2%',
   longFormViews28d:     '361,925',
-  longFormRevPct:       '51.4%', // % of total revenue despite 3.2% of views
+  longFormRevPct:       '51.4%',
   longFormRPM:          '$0.20',
   longFormRPMExact:     '$0.2015',
-  longFormVsShorts:     '32x',   // long-form earns 32x more per view than Shorts
+  longFormVsShorts:     '32x',
 
   // --- Revenue (28-day) ---
   totalRev28d:          '$143.39',
   shortsRev28d:         '$69.07',
   longFormRev28d:       '$72.95',
   channelRPM:           '$0.012',
-  anomalyVideoRPM:      '$3.006', // "which metal vessel to cook in" — 250x channel average
+  anomalyVideoRPM:      '$3.006',
 
   // --- Lifetime Revenue ---
   lifetimeRevenue:      '$3,010.66',
@@ -138,7 +139,7 @@ const SM = {
     { year: '2023', views: 0.19 },
     { year: '2024', views: 0.21 },
     { year: '2025', views: 6.67 },
-    { year: '2026*', views: 2.69 }  // YTD to Mar 15 — asterisk signals partial year
+    { year: '2026*', views: 2.69 }
   ],
 
   // --- Market Data (sourced — do not approximate) ---
@@ -194,4 +195,3 @@ const SM = {
   membership: '#',
 
 };
-lastUpdated: 'March 17, 2026' 
