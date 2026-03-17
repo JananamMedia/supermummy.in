@@ -20,20 +20,20 @@
   <script src="data.js" defer></script>
 
   <style>
-    .data-window {
-      display: inline-block;
+
+    /* ── SECTION LABEL ── */
+    .section-label {
       font-family: var(--font-body, 'Hind', sans-serif);
-      font-size: 0.75rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--pink, #E8006F);
-      border: 1px solid rgba(232,0,111,0.25);
-      border-radius: 20px;
-      padding: 0.3rem 0.9rem;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.25rem;
+      display: block;
     }
 
+    /* ── STAT HERO (commanding, not screaming) ── */
     .stat-hero {
       margin-bottom: 1.5rem;
     }
@@ -54,6 +54,7 @@
       line-height: 1.4;
     }
 
+    /* ── GEOGRAPHY ── */
     .geo-block { max-width: 860px; margin: 0 auto; }
     .geo-cities {
       font-family: var(--font-display, 'Playfair Display', serif);
@@ -61,45 +62,62 @@
       font-weight: 600;
       color: var(--dark, #1A0A10);
       letter-spacing: 0.02em;
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
       line-height: 1.5;
     }
     .geo-cities span { color: var(--pink, #E8006F); }
     .geo-statement {
       font-family: var(--font-body, 'Hind', sans-serif);
-      font-size: 1.05rem;
+      font-size: 0.95rem;
       line-height: 1.75;
       color: var(--dark, #1A0A10);
-      margin-bottom: 1rem;
+      opacity: 0.65;
+      margin-bottom: 2rem;
     }
+
+    /* ── GEO CALLOUT — cream, not black ── */
     .geo-callout {
-      background: var(--dark, #1A0A10);
-      color: #FFF8F2;
+      background: #fff;
+      border: 1px solid rgba(232,0,111,0.15);
       border-radius: 12px;
-      padding: 1.5rem 2rem;
-      margin: 2rem 0;
-      font-family: var(--font-body, 'Hind', sans-serif);
+      padding: 1.75rem 2rem;
+      margin: 0 0 1.5rem 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 600px) {
+      .geo-callout { grid-template-columns: 1fr; gap: 1.5rem; }
     }
     .geo-callout__number {
       font-family: var(--font-display, 'Playfair Display', serif);
-      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
       font-weight: 700;
       color: var(--pink, #E8006F);
       line-height: 1;
     }
     .geo-callout__text {
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.92rem;
+      line-height: 1.65;
       margin-top: 0.5rem;
-      opacity: 0.85;
+      color: var(--dark, #1A0A10);
     }
-    .geo-callout__text strong { color: #fff; opacity: 1; }
-    .geo-invisible {
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,248,242,0.15);
+    .geo-callout__text strong { color: var(--dark, #1A0A10); }
+    .geo-callout__divider {
+      border-left: 1px solid rgba(232,0,111,0.15);
+      padding-left: 2rem;
+    }
+    @media (max-width: 600px) {
+      .geo-callout__divider {
+        border-left: none;
+        padding-left: 0;
+        border-top: 1px solid rgba(232,0,111,0.15);
+        padding-top: 1.5rem;
+      }
     }
 
+    /* ── STAT PAIR (supporting cards — smaller than hero) ── */
     .stat-pair {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -114,10 +132,9 @@
       border-radius: 12px;
       padding: 1.5rem;
     }
-    .stat-card--dark { background: var(--dark, #1A0A10); }
     .stat-card__number {
       font-family: var(--font-display, 'Playfair Display', serif);
-      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
       font-weight: 700;
       color: var(--pink, #E8006F);
       line-height: 1;
@@ -129,9 +146,11 @@
       margin-top: 0.4rem;
       color: var(--dark, #1A0A10);
     }
-    .stat-card--dark .stat-card__label { color: rgba(255,248,242,0.75); }
 
+    /* ── SEARCH / METHODOLOGY BLOCKS ── */
     .search-block { max-width: 860px; margin: 0 auto; }
+    .methodology-block { max-width: 860px; margin: 0 auto; }
+
     .search-explanation {
       font-family: var(--font-body, 'Hind', sans-serif);
       font-size: 1.05rem;
@@ -141,10 +160,9 @@
     }
     .search-explanation strong { color: var(--pink, #E8006F); }
 
-    .methodology-block { max-width: 860px; margin: 0 auto; }
     .methodology-quote {
       font-family: var(--font-display, 'Playfair Display', serif);
-      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
       font-style: italic;
       line-height: 1.7;
       color: var(--dark, #1A0A10);
@@ -153,6 +171,7 @@
       margin: 2rem 0;
     }
 
+    /* ── YOUTUBE COMMENT CARD ── */
     .yt-comment-wrap { margin: 2.5rem 0; }
     .yt-comment-card {
       background: #0f0f0f;
@@ -194,6 +213,7 @@
       margin-top: 0.6rem;
     }
 
+    /* ── THREE STATS ROW ── */
     .three-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -202,7 +222,9 @@
     }
     @media (max-width: 700px) { .three-stats { grid-template-columns: 1fr; } }
 
+    /* ── PARTNERSHIP BLOCK ── */
     .partnership-block { max-width: 860px; margin: 0 auto; }
+
     .partnership-lead {
       font-family: var(--font-display, 'Playfair Display', serif);
       font-size: clamp(1.4rem, 3vw, 1.9rem);
@@ -218,9 +240,10 @@
       color: var(--dark, #1A0A10);
       margin-bottom: 1rem;
     }
+
     .disclaimer-callout {
-      background: rgba(232,0,111,0.06);
-      border: 1px solid rgba(232,0,111,0.2);
+      background: rgba(232,0,111,0.05);
+      border: 1px solid rgba(232,0,111,0.18);
       border-radius: 10px;
       padding: 1.25rem 1.5rem;
       margin: 1.75rem 0;
@@ -231,6 +254,7 @@
       font-style: italic;
     }
     .disclaimer-callout strong { color: var(--pink, #E8006F); font-style: normal; }
+
     .lives-line {
       font-family: var(--font-display, 'Playfair Display', serif);
       font-size: clamp(1.1rem, 2.5vw, 1.3rem);
@@ -248,25 +272,27 @@
       margin-top: 2rem;
     }
     @media (max-width: 600px) { .partner-cols { grid-template-columns: 1fr; } }
+
     .partner-col { border-radius: 10px; padding: 1.25rem 1.5rem; }
     .partner-col--yes {
       background: rgba(232,0,111,0.05);
       border: 1px solid rgba(232,0,111,0.2);
     }
     .partner-col--no {
-      background: rgba(26,10,16,0.04);
-      border: 1px solid rgba(26,10,16,0.12);
+      background: rgba(26,10,16,0.03);
+      border: 1px solid rgba(26,10,16,0.1);
     }
     .partner-col__label {
       font-family: var(--font-body, 'Hind', sans-serif);
-      font-size: 0.7rem;
+      font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       margin-bottom: 0.75rem;
     }
     .partner-col--yes .partner-col__label { color: var(--pink, #E8006F); }
-    .partner-col--no .partner-col__label { color: rgba(26,10,16,0.45); }
+    .partner-col--no .partner-col__label { color: rgba(26,10,16,0.4); }
+
     .partner-col ul { list-style: none; padding: 0; margin: 0; }
     .partner-col ul li {
       font-family: var(--font-body, 'Hind', sans-serif);
@@ -278,6 +304,7 @@
     }
     .partner-col ul li:last-child { border-bottom: none; }
 
+    /* ── MEDIA KIT ── */
     .mediakit-section { text-align: center; max-width: 600px; margin: 0 auto; }
     .mediakit-section p {
       font-family: var(--font-body, 'Hind', sans-serif);
@@ -287,6 +314,7 @@
       line-height: 1.6;
     }
 
+    /* ── CHANDA ── */
     .chanda-block { display: flex; gap: 2rem; align-items: flex-start; }
     .chanda-photo img {
       width: 120px;
@@ -319,16 +347,6 @@
     .chanda-links a:hover { text-decoration: underline; }
     @media (max-width: 600px) { .chanda-block { flex-direction: column; } }
 
-    .section-label {
-      font-family: var(--font-body, 'Hind', sans-serif);
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--pink, #E8006F);
-      margin-bottom: 1.25rem;
-      display: block;
-    }
   </style>
 
   <script type="application/ld+json">
@@ -383,26 +401,24 @@
           <p class="geo-cities">
             <span>Patna.</span> <span>Lucknow.</span> <span>Indore.</span> <span>Agra.</span> <span>Varanasi.</span>
           </p>
-          <p class="geo-statement" style="opacity:0.65; font-size:0.95rem;">
+          <p class="geo-statement">
             These are not footnotes in our analytics. These are our top five cities.
           </p>
 
           <div class="geo-callout">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
-              <div>
-                <div class="geo-callout__number" id="patna-lucknow-views">2.1 million</div>
-                <div class="geo-callout__text">
-                  <strong>Patna + Lucknow</strong> combined views in 28 days —
-                  more than all six Tier 1 metros combined.
-                </div>
+            <div>
+              <div class="geo-callout__number" id="patna-lucknow-views">2.1 million</div>
+              <div class="geo-callout__text">
+                <strong>Patna + Lucknow</strong> combined views in 28 days —
+                more than all six Tier 1 metros combined.
               </div>
-              <div style="border-left:1px solid rgba(255,248,242,0.15); padding-left:2rem;">
-                <div class="geo-callout__number" data-field="invisibleIndiaExact">30.1%</div>
-                <div class="geo-callout__text">
-                  come from towns that don't appear in any dashboard.<br><br>
-                  <strong>We call them Her Bharat.</strong><br>
-                  They are not an underserved audience. They are the audience.
-                </div>
+            </div>
+            <div class="geo-callout__divider">
+              <div class="geo-callout__number" data-field="invisibleIndiaExact">30.1%</div>
+              <div class="geo-callout__text">
+                come from towns that don't appear in any dashboard.<br><br>
+                <strong>We call them Her Bharat.</strong><br>
+                They are not an underserved audience. They are the audience.
               </div>
             </div>
           </div>
@@ -451,7 +467,7 @@
       </div>
     </section>
 
-    <!-- ===== BLOCK 3: THE CONTENT METHODOLOGY ===== -->
+    <!-- ===== BLOCK 3: CONTENT METHODOLOGY ===== -->
     <section class="section section--cream">
       <div class="container">
         <div class="methodology-block">
@@ -477,7 +493,6 @@
             answer right now, and a qualified doctor should be the one who gives it to her.
           </p>
 
-          <!-- YouTube Comment Card -->
           <div class="yt-comment-wrap">
             <div class="yt-comment-card">
               <div class="yt-comment-header">
