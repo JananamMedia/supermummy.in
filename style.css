@@ -99,7 +99,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--pink);
 }
 
-.nav-logo img { height: 40px; width: auto; }
+.nav-logo img { height: 80px; width: auto; }
 
 .nav-links {
   display: flex;
@@ -273,6 +273,207 @@ blockquote {
   font-size: 0.72rem;
   color: var(--grey-light);
   margin-top: 0.25rem;
+}
+
+/* --- About Page: Lede Numbers Block --- */
+.about-lede {
+  padding-top: calc(var(--nav-height) + var(--section-pad));
+  padding-bottom: var(--section-pad);
+  background: var(--pink);
+  text-align: center;
+}
+
+.about-lede-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-lede-stat {
+  padding: 2rem 1rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.about-lede-stat:last-child {
+  border-right: none;
+}
+
+.about-lede-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  color: var(--white);
+  line-height: 1;
+}
+
+.about-lede-label {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.about-lede-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0.5rem;
+}
+
+/* --- About Page: Her Bharat Block --- */
+.her-bharat {
+  background: var(--dark);
+  padding: var(--section-pad) 0;
+  text-align: center;
+}
+
+.her-bharat-eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pink-light);
+  margin-bottom: 1.5rem;
+}
+
+.her-bharat-stat {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.her-bharat-stat span {
+  color: var(--pink-light);
+}
+
+.her-bharat-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--pink-light);
+  margin-bottom: 1.5rem;
+}
+
+.her-bharat-cities {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  color: var(--grey-light);
+  line-height: 2;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.her-bharat-truth {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: var(--white);
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.her-bharat-truth em {
+  color: var(--pink-light);
+  font-style: normal;
+}
+
+/* --- About Page: Founder Block --- */
+.founder-block {
+  background: var(--white);
+  padding: var(--section-pad) 0;
+}
+
+.founder-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.founder-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: var(--cream-dark);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.founder-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-text h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin-bottom: 0.25rem;
+}
+
+.founder-role {
+  font-size: 0.9rem;
+  color: var(--grey);
+  margin-bottom: 1.25rem;
+}
+
+.founder-truth {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--dark);
+  border-left: 4px solid var(--pink);
+  padding: 1rem 1.25rem;
+  background: rgba(232, 0, 111, 0.03);
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.25rem;
+}
+
+.founder-links {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* --- About Page: Closing Block --- */
+.closing-block {
+  background: var(--cream);
+  padding: var(--section-pad) 0;
+  text-align: center;
+}
+
+.closing-block p {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--grey);
+  margin-bottom: 0.5rem;
+}
+
+.closing-block .closing-line {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--dark);
+  margin-bottom: 2rem;
 }
 
 /* --- Two Doors --- */
@@ -663,47 +864,6 @@ body.hindi .whatsapp-section p {
   font-family: 'Baloo 2', sans-serif;
 }
 
-/* --- Responsive: Tablet --- */
-@media (max-width: 900px) {
-  .doors { grid-template-columns: 1fr; }
-  .three-col { grid-template-columns: 1fr; gap: 2rem; }
-  .chanda-block { flex-direction: column; align-items: center; text-align: center; }
-  .chanda-links { justify-content: center; }
-  .stats { grid-template-columns: repeat(2, 1fr); }
-  .video-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* --- Responsive: Mobile --- */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: var(--nav-height);
-    left: 0; right: 0;
-    background: var(--white);
-    flex-direction: column;
-    padding: 1.5rem;
-    gap: 1rem;
-    border-bottom: 1px solid rgba(26, 10, 16, 0.06);
-    box-shadow: 0 8px 24px rgba(26, 10, 16, 0.08);
-  }
-
-  .nav-links.open { display: flex; }
-  .nav-toggle { display: block; }
-
-  .tab-buttons { flex-wrap: wrap; }
-  .tab-btn { font-size: 0.85rem; padding: 0.6rem 1rem; }
-
-  .stats { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-  .stat { padding: 1rem 0.5rem; }
-  .video-grid { grid-template-columns: 1fr; }
-}
-
-/* --- Responsive: Small Mobile --- */
-@media (max-width: 480px) {
-  .footer .container { flex-direction: column; text-align: center; }
-  .footer-links { justify-content: center; flex-wrap: wrap; }
-}
 /* --- Saveable grid variants --- */
 .saveable-grid--3 {
   grid-template-columns: repeat(3, 1fr);
@@ -714,13 +874,6 @@ body.hindi .whatsapp-section p {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (max-width: 768px) {
-  .saveable-grid--3,
-  .saveable-grid--2 {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* --- Playlist grid --- */
@@ -777,14 +930,55 @@ body.hindi .whatsapp-section p {
   padding: 0.65rem 1.5rem;
 }
 
+/* --- Responsive: Tablet --- */
 @media (max-width: 900px) {
-  .playlist-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .doors { grid-template-columns: 1fr; }
+  .three-col { grid-template-columns: 1fr; gap: 2rem; }
+  .chanda-block { flex-direction: column; align-items: center; text-align: center; }
+  .chanda-links { justify-content: center; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+  .playlist-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-lede-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-lede-stat:nth-child(2) { border-right: none; }
+  .about-lede-stat:nth-child(1),
+  .about-lede-stat:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.2); }
+  .founder-inner { flex-direction: column; align-items: center; text-align: center; }
+  .founder-truth { text-align: left; }
+  .founder-links { justify-content: center; }
 }
 
-@media (max-width: 600px) {
-  .playlist-grid {
-    grid-template-columns: 1fr;
+/* --- Responsive: Mobile --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: var(--white);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(26, 10, 16, 0.06);
+    box-shadow: 0 8px 24px rgba(26, 10, 16, 0.08);
   }
+
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+
+  .tab-buttons { flex-wrap: wrap; }
+  .tab-btn { font-size: 0.85rem; padding: 0.6rem 1rem; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+  .stat { padding: 1rem 0.5rem; }
+  .video-grid { grid-template-columns: 1fr; }
+  .saveable-grid--3,
+  .saveable-grid--2 { grid-template-columns: 1fr; }
+  .playlist-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Responsive: Small Mobile --- */
+@media (max-width: 480px) {
+  .footer .container { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; flex-wrap: wrap; }
 }
