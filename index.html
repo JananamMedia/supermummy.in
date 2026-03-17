@@ -84,6 +84,27 @@
       line-height: 1.9;
       margin-bottom: 2rem;
     }
+
+    /* Founder links — prominent, matching work-with-us style */
+    .founder-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .founder-links a {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--pink, #E8006F);
+      text-decoration: none;
+      border-bottom: 2px solid rgba(232,0,111,0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
+    }
+    .founder-links a:hover { border-color: var(--pink, #E8006F); }
+
     @media (max-width: 480px) {
       .her-bharat-stat {
         font-size: clamp(1.4rem, 8vw, 2rem);
@@ -114,14 +135,16 @@
       <a href="index.html" class="nav-logo" aria-label="SuperMummy home">
         <img src="logo.png" alt="SuperMummy" style="height: 80px;">
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Toggle menu"
+        onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
         <li><a href="index.html" class="active">About</a></li>
         <li><a href="work-with-us.html">Work With Us</a></li>
         <li><a href="mummies.html">Are You Pregnant?</a></li>
-        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g" target="_blank" rel="noopener" class="nav-cta">Channel देखें →</a></li>
+        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g"
+               target="_blank" rel="noopener" class="nav-cta">Channel देखें →</a></li>
       </ul>
     </div>
   </nav>
@@ -169,7 +192,8 @@
 
         <p>If she had known what postpartum hemorrhage looked like — if anyone in that family had seen one video explaining the warning signs — the outcome might have been different.</p>
 
-        <p style="font-weight: 600;">That's when <a href="https://jananam.co" target="_blank" rel="noopener" style="color: var(--dark); text-decoration: underline; text-decoration-color: var(--pink); text-underline-offset: 3px;">Jananam Media</a> and SuperMummy began.</p>
+        <p style="font-weight: 600;">That's when <a href="https://jananam.co" target="_blank" rel="noopener"
+          style="color: var(--dark); text-decoration: underline; text-decoration-color: var(--pink); text-underline-offset: 3px;">Jananam Media</a> and SuperMummy began.</p>
 
       </div>
     </section>
@@ -226,16 +250,13 @@
             <h3>Chanda Chaudhary</h3>
             <p class="founder-role">Founder, Jananam Media Pvt. Ltd.</p>
 
-            <p class="founder-truth">
-              SuperMummy was built by a woman who has never been pregnant. Because sometimes the clearest eyes belong to the witness, not the patient.
-            </p>
-
-            <p style="font-size: 0.95rem; color: var(--dark-soft);">
+            <p style="font-size: 0.95rem; color: var(--dark-soft); line-height: 1.75;">
               Chanda has spent eight years building the platform she wishes had existed for the woman who didn't survive. If something here moved you — let's talk.
             </p>
 
             <div class="founder-links">
-              <a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn →</a>
+              <a href="https://www.linkedin.com/in/chandachaudhary/"
+                 target="_blank" rel="noopener">LinkedIn →</a>
               <a href="mailto:chanda@jananam.co">chanda@jananam.co</a>
             </div>
           </div>
@@ -266,10 +287,13 @@
         <span class="footer-copy" style="font-size: 1.1rem;">© Jananam Media Pvt. Ltd.</span>
       </div>
       <ul class="footer-links">
-        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g" target="_blank" rel="noopener">YouTube</a></li>
-        <li><a href="https://www.facebook.com/share/1888aEXNYU/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g"
+               target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.facebook.com/share/1888aEXNYU/"
+               target="_blank" rel="noopener">Facebook</a></li>
         <li><a href="#" aria-label="Instagram — coming soon">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.linkedin.com/in/chandachaudhary/"
+               target="_blank" rel="noopener">LinkedIn</a></li>
         <li><a href="https://jananam.co" target="_blank" rel="noopener">Jananam</a></li>
       </ul>
     </div>
