@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work With Us — SuperMummy | India's Leading Hindi Pregnancy Health Channel</title>
-  <meta name="description" content="Partner with SuperMummy — India's most trusted Hindi pregnancy health channel. 11.4 million views in 28 days, 80.4% search-driven, reaching women across the Hindi belt at the moment of need.">
+  <meta name="description" content="Partner with SuperMummy — India's most trusted Hindi pregnancy health channel. 1.15 crore views in 28 days, 80.4% search-driven, reaching women across the Hindi belt at the moment of need.">
   <meta property="og:title" content="Work With SuperMummy — India's Leading Hindi Pregnancy Health Channel">
-  <meta property="og:description" content="11.4 million views in 28 days. 80.4% from YouTube Search. The right content met the right audience in the right language.">
+  <meta property="og:description" content="1.15 crore views in 28 days. 80.4% from YouTube Search. The right content met the right audience in the right language.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://supermummy.in/work-with-us.html">
   <meta property="og:site_name" content="SuperMummy">
@@ -277,7 +277,13 @@
       margin-bottom: 1.75rem;
       line-height: 1.6;
     }
-    .chanda-block { display: flex; gap: 2rem; align-items: flex-start; }
+
+    /* Chanda block — fixed alignment desktop and mobile */
+    .chanda-block {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
     .chanda-photo {
       width: 120px;
       height: 120px;
@@ -290,7 +296,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      border-radius: 0;
     }
     .chanda-info h3 {
       font-family: var(--font-display, 'Playfair Display', serif);
@@ -306,8 +311,21 @@
       text-transform: uppercase;
       margin-bottom: 0.75rem;
     }
-    /* CHANGED: larger, more prominent contact links */
-    .chanda-links { display: flex; gap: 1.5rem; margin-top: 1.25rem; flex-wrap: wrap; align-items: center; }
+    .chanda-bio {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--dark, #1A0A10);
+      margin: 0;
+      text-align: left;
+    }
+    .chanda-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
     .chanda-links a {
       font-family: var(--font-body, 'Hind', sans-serif);
       font-size: 1.05rem;
@@ -319,7 +337,24 @@
       transition: border-color 0.2s ease;
     }
     .chanda-links a:hover { border-color: var(--pink, #E8006F); }
-    @media (max-width: 600px) { .chanda-block { flex-direction: column; } }
+
+    /* Mobile: stack photo above text, left-align everything */
+    @media (max-width: 600px) {
+      .chanda-block {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .chanda-photo {
+        width: 90px;
+        height: 90px;
+      }
+      .chanda-info h3,
+      .chanda-role,
+      .chanda-bio,
+      .chanda-links {
+        text-align: left;
+      }
+    }
   </style>
 
   <script type="application/ld+json">
@@ -359,12 +394,13 @@
 
   <main>
 
+    <!-- BLOCK 1: THE AUDIENCE -->
     <section class="hero section--cream">
       <div class="container">
         <div class="geo-block">
           <span class="section-label">The Audience</span>
           <div class="stat-hero">
-            <div class="stat-hero__number">90.5%</div>
+            <div class="stat-hero__number" data-field="nonMetroPct">90.5%</div>
             <div class="stat-hero__label">of our audience comes from outside India's six major metros.</div>
           </div>
           <p class="geo-cities">
@@ -373,7 +409,7 @@
           <p class="geo-statement">These are not footnotes in our analytics. These are our top five cities.</p>
           <div class="geo-callout">
             <div>
-              <div class="geo-callout__number" id="patna-lucknow-views">2.1 million</div>
+              <div class="geo-callout__number" data-field="patnaLucknowViews">21.4 Lakh</div>
               <div class="geo-callout__text">
                 <strong>Patna + Lucknow</strong> combined views in 28 days —
                 more than all six Tier 1 metros combined.
@@ -384,7 +420,7 @@
               <div class="geo-callout__text">
                 come from towns that don't appear in any dashboard.<br><br>
                 <strong>We call them Her Bharat.</strong><br>
-                They are not an underserved audience. They are the audience.
+                They are not an under-served audience. They are the audience.
               </div>
             </div>
           </div>
@@ -402,6 +438,7 @@
       </div>
     </section>
 
+    <!-- BLOCK 2: HOW THEY FIND US -->
     <section class="section section--white">
       <div class="container">
         <div class="search-block">
@@ -413,7 +450,7 @@
           <p class="search-explanation">Not the Shorts feed. Not a viral moment. Not the algorithm deciding she might be interested.</p>
           <p class="search-explanation">
             She opened YouTube. Typed a pregnancy question in Hindi. Found a doctor answering it on SuperMummy.
-            <strong><span data-field="searchViewsEn">9.2 million</span> times in 28 days.</strong>
+            <strong><span data-field="searchViewsLakh">92 Lakh+</span> times in 28 days.</strong>
           </p>
           <p class="search-explanation" style="opacity:0.6; font-size:0.92rem; margin-top:1.5rem;">
             The remaining <span data-field="shortsFeedPct">13.2%</span> comes from the Shorts feed —
@@ -424,6 +461,7 @@
       </div>
     </section>
 
+    <!-- BLOCK 3: WHY THEY STAY -->
     <section class="section section--cream">
       <div class="container">
         <div class="methodology-block">
@@ -469,12 +507,13 @@
       </div>
     </section>
 
+    <!-- BLOCK 4: THE SCALE -->
     <section class="section section--white">
       <div class="container">
         <span class="section-label">The Scale</span>
         <div class="three-stats">
           <div class="stat-card">
-            <div class="stat-card__number" data-field="monthlyViewsExact">11,455,481</div>
+            <div class="stat-card__number" data-field="monthlyViewsEn">1.15 Crore</div>
             <div class="stat-card__label">
               views in the last 28 days<br>
               <span style="font-size:0.8rem; opacity:0.5;" data-field="window28Days">Feb 16 – Mar 15, 2026</span>
@@ -498,6 +537,7 @@
       </div>
     </section>
 
+    <!-- BLOCK 5: PARTNERSHIPS -->
     <section class="section section--cream">
       <div class="container">
         <div class="partnership-block">
@@ -505,7 +545,7 @@
           <p class="partnership-lead">We do not take advertising.<br>We take partnerships.</p>
           <p class="partnership-body">
             Editorial independence is not a negotiating position. It is the reason
-            <span data-field="subscribersExact">149,628</span> subscribers trust us with the most
+            <span data-field="subscribersEn">1.49 Lakh</span> subscribers trust us with the most
             anxious moments of their pregnancies. The moment a sponsor shapes our content,
             the trust dissolves. And the trust is the product.
           </p>
@@ -550,6 +590,7 @@
       </div>
     </section>
 
+    <!-- BLOCK 6: MEDIA KIT -->
     <section class="section section--white" style="text-align:center;">
       <div class="container">
         <div class="mediakit-section">
@@ -565,7 +606,7 @@
       </div>
     </section>
 
-    <!-- CHANGED: Chanda block — Option 3 copy, larger contact links -->
+    <!-- BLOCK 7: CHANDA -->
     <section class="section section--cream">
       <div class="container" style="max-width:800px;">
         <div class="chanda-block">
@@ -575,7 +616,7 @@
           <div class="chanda-info">
             <h3>Chanda Chaudhary</h3>
             <p class="chanda-role">Founder, Jananam Media Pvt. Ltd.</p>
-            <p style="font-family:'Hind', sans-serif; font-size:1rem; line-height:1.75; color:var(--dark, #1A0A10); margin:0;">
+            <p class="chanda-bio">
               Chanda Chaudhary. Founder, Jananam Media. Twenty-five years in media across India, Singapore, Dubai and London. Eight years building SuperMummy. She is not new to this conversation.
             </p>
             <div class="chanda-links">
@@ -607,18 +648,11 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      if (typeof SM === 'undefined') return;
       document.querySelectorAll('[data-field]').forEach(el => {
         const key = el.getAttribute('data-field');
-        if (SM && SM[key] !== undefined) el.textContent = SM[key];
+        if (SM[key] !== undefined) el.textContent = SM[key];
       });
-      if (SM && SM.topCities && SM.tier1Views) {
-        const patna   = SM.topCities[0].viewsExact;
-        const lucknow = SM.topCities[1].viewsExact;
-        const combined = patna + lucknow;
-        const fmt = n => (n / 1000000).toFixed(1) + ' million';
-        const el = document.getElementById('patna-lucknow-views');
-        if (el) el.textContent = fmt(combined);
-      }
     });
   </script>
 
