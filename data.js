@@ -8,15 +8,18 @@
 
 const SM = {
 
+  // --- Meta ---
+  lastUpdated:          'March 17, 2026',
+
   // --- Channel Numbers (update monthly) ---
   totalViews:           '10.6 करोड़+',
   totalViewsEn:         '10.6 Crore+',
   monthlyViews:         '1.15 करोड़',
   monthlyViewsEn:       '1.15 Crore',
-  monthlyViewsExact:    '11,455,481',
+  monthlyViewsExact:    '1.15 Crore',
   subscribers:          '1.49 लाख',
   subscribersEn:        '1.49 Lakh',
-  subscribersExact:     '149,628',
+  subscribersExact:     '1,49,628',
   totalVideos:          '900+',
   yearsActive:          '8',
 
@@ -24,10 +27,10 @@ const SM = {
   window28Days:         'Feb 16 – Mar 15, 2026',
   dailyAvgViews:        '4.09 लाख',
   dailyAvgViewsEn:      '4.09 Lakh',
-  dailyAvgViewsExact:   '409,124',
+  dailyAvgViewsExact:   '4,09,124',
   peakDay:              '4.68 लाख',
   peakDayEn:            '4.68 Lakh',
-  peakDayExact:         '468,229',
+  peakDayExact:         '4,68,229',
   peakDayDate:          'March 12, 2026',
   watchHours28d:        '39,816',
   newSubs28d:           '6,204',
@@ -40,40 +43,41 @@ const SM = {
   yoyGrowth2425:        '+372%',
   yoyGrowth2526:        '+1,516%',
   momGrowth:            '+16.3%',
-  annualRunRate:        '14.9 crore views/year',
+  annualRunRate:        '14.9 Crore views/year',
 
   // --- Traffic Sources (28-day, Feb 16 – Mar 15, 2026) ---
   searchViewsPct:       '80.4%',
-  searchViewsExact:     '9,214,828',
+  searchViewsExact:     '92 Lakh+',
   searchViewsEn:        '9.2 million',
   searchViewsLakh:      '92 Lakh+',
   searchRetention:      '84.98%',
   searchCTR:            '7.75%',
   searchWatchHours:     '29,991',
   shortsFeedPct:        '13.2%',
-  shortsFeedViews:      '1,507,245',
+  shortsFeedViews:      '15.07 Lakh',
   browsePct:            '5.3%',
-  browseViews:          '608,432',
+  browseViews:          '6.08 Lakh',
   suggestedViewsPct:    '0.5%',
   suggestedViewsExact:  '56,532',
   suggestedAVD:         '2:16',
 
   // --- Audience Geography (28-day) ---
+  nonMetroPct:          '90.5%',
   indiaPct:             '97.11%',
-  indiaViews:           '11,112,386',
+  indiaViews:           '1.11 Crore',
   pakistanPct:          '1.25%',
   nepalPct:             '0.85%',
 
   // --- India Tier Breakdown (28-day, city-level export) ---
   tier1Pct:             '9.5%',
-  tier1Views:           '1,059,294',
+  tier1Views:           '10.59 Lakh',
   tier2Pct:             '48.5%',
-  tier2Views:           '5,389,403',
+  tier2Views:           '53.89 Lakh',
   tier3Pct:             '11.8%',
-  tier3Views:           '1,315,828',
+  tier3Views:           '13.16 Lakh',
   invisibleIndiaPct:    '30%',
   invisibleIndiaExact:  '30.1%',
-  invisibleIndiaViews:  '3,347,861',
+  invisibleIndiaViews:  '33.48 Lakh',
   // Note: Invisible India = views YouTube cannot attribute to any named city.
   // Calculated as: India total views minus sum of all 150 named cities in export.
   // This is the correct, data-derived figure as of March 15, 2026.
@@ -81,28 +85,31 @@ const SM = {
 
   // --- Hindi Belt (UP+BR+MP+RJ+HR+UK+JH+CG+HP combined) ---
   hindiBeltPct:         '58.0%',
-  hindiBeltViews:       '6,444,903',
+  hindiBeltViews:       '64.45 Lakh',
+
+  // --- Patna + Lucknow Combined (for Work With Us page) ---
+  patnaLucknowViews:    '21.4 Lakh',
 
   // --- India State Breakdown (top states, 28-day) ---
-  stateUP:              '2,794,934',
+  stateUP:              '27.95 Lakh',
   stateUPPct:           '25.15%',
-  stateBihar:           '1,316,993',
+  stateBihar:           '13.17 Lakh',
   stateBiharPct:        '11.85%',
-  stateMH:              '1,213,077',
+  stateMH:              '12.13 Lakh',
   stateMHPct:           '10.92%',
-  stateMP:              '984,516',
+  stateMP:              '9.85 Lakh',
   stateMPPct:           '8.86%',
-  stateRJ:              '714,450',
+  stateRJ:              '7.14 Lakh',
   stateRJPct:           '6.43%',
-  stateGJ:              '623,832',
+  stateGJ:              '6.24 Lakh',
   stateGJPct:           '5.61%',
-  stateDL:              '537,091',
+  stateDL:              '5.37 Lakh',
   stateDLPct:           '4.83%',
 
   // --- Shorts Performance (28-day) ---
   shortsCount:          '423',
   shortsViewsPct:       '96.8%',
-  shortsViews28d:       '11,074,561',
+  shortsViews28d:       '1.11 Crore',
   shortsRPM:            '$0.006',
   shortsAvgRetention:   '106.9%',
   shortsHighRetCount:   '367',
@@ -111,7 +118,7 @@ const SM = {
   longFormCount:        '77',
   longFormActiveCount:  '45',
   longFormViewsPct:     '3.2%',
-  longFormViews28d:     '361,925',
+  longFormViews28d:     '3.62 Lakh',
   longFormRevPct:       '51.4%',
   longFormRPM:          '$0.20',
   longFormRPMExact:     '$0.2015',
@@ -126,7 +133,7 @@ const SM = {
 
   // --- Lifetime Revenue ---
   lifetimeRevenue:      '$3,010.66',
-  lifetimeViews:        '106,000,000',
+  lifetimeViews:        '10.6 Crore',
   lifetimeRPM:          '$0.028',
 
   // --- Growth Chart Data (annual views in crores) ---
@@ -143,10 +150,10 @@ const SM = {
   ],
 
   // --- Market Data (sourced — do not approximate) ---
-  annualPregnancies:    '2.9 crore (29 million)',
+  annualPregnancies:    '2.9 Crore (29 million)',
   specialistVacancy:    '70%',
   reliableVideos:       '15.3%',
-  hindiSpeakers:        '600 million',
+  hindiSpeakers:        '60 Crore',
   dailyPregnancies:     '~80,000',
 
   // --- Top Cities (last 28 days, Feb 16 – Mar 15, 2026) ---
