@@ -85,10 +85,9 @@
 
   <main>
 
-    <!-- ===== BLOCK 1: NUMBERS — all data from data.js via JS below ===== -->
+    <!-- ===== BLOCK 1: NUMBERS ===== -->
     <section class="about-lede">
       <div class="container">
-
         <div class="about-lede-grid">
           <div class="about-lede-stat">
             <span class="about-lede-number" id="stat-views"></span>
@@ -107,9 +106,7 @@
             <span class="about-lede-label">Subscribers &amp; Growing</span>
           </div>
         </div>
-
         <p class="about-lede-tagline">All in Hindi. All free. Always.</p>
-
       </div>
     </section>
 
@@ -152,21 +149,23 @@
     </section>
 
     <!-- ===== BLOCK 4: HER BHARAT ===== -->
+    <!-- Updated March 17, 2026. Numbers from data.js — do not hardcode here. -->
     <section class="her-bharat">
       <div class="container">
 
         <p class="her-bharat-eyebrow">The Audience</p>
 
         <p class="her-bharat-stat">
-          30% of our viewers come from towns<br>
-          <span>YouTube doesn't name.</span>
+          <span id="stat-search-views"></span> times last month,<br>
+          <span>someone searched for a pregnancy question<br>on YouTube and watched a SuperMummy video.</span>
         </p>
 
         <p class="her-bharat-name">We call them Her Bharat.</p>
 
         <p class="her-bharat-cities">
           Patna. Lucknow. Indore. Agra. Varanasi.<br>
-          And then — beyond the analytics — hundreds of towns<br>that don't appear in any dashboard.
+          And then — beyond the analytics — <span id="stat-invisible-pct"></span> of our viewers<br>
+          come from towns that don't appear in any dashboard.
         </p>
 
         <p class="her-bharat-truth">
@@ -244,11 +243,15 @@
     document.addEventListener('DOMContentLoaded', function () {
       if (typeof SM === 'undefined') return;
 
-      // Block 1 — four stats, all from data.js
+      // Block 1 — four stats
       document.getElementById('stat-views').textContent  = SM.totalViewsEn;
       document.getElementById('stat-videos').textContent = SM.totalVideos;
       document.getElementById('stat-years').textContent  = SM.yearsActive + ' Years';
       document.getElementById('stat-subs').textContent   = SM.subscribersEn;
+
+      // Block 4 — Her Bharat
+      document.getElementById('stat-search-views').textContent  = SM.searchViewsEn;
+      document.getElementById('stat-invisible-pct').textContent = SM.invisibleIndiaExact;
     });
   </script>
 
