@@ -63,37 +63,27 @@
   }
   </script>
 
-  <!-- Her Bharat block typography refinement -->
   <style>
-    /* Desktop: scale down the main stat so it sits on 2 clean lines */
     .her-bharat-stat {
       font-size: clamp(1.6rem, 4vw, 3rem);
       line-height: 1.2;
     }
-
-    /* The inline spans inside stat inherit pink — keep them consistent */
     .her-bharat-stat span {
       color: var(--pink-light);
       display: block;
       font-size: clamp(1.4rem, 3.5vw, 2.6rem);
       margin-top: 0.2rem;
     }
-
-    /* Her Bharat name — slightly reduced so it doesn't compete with stat */
     .her-bharat-name {
       font-size: clamp(1.4rem, 3.5vw, 2.4rem);
       margin-top: 1.5rem;
       margin-bottom: 0.5rem;
     }
-
-    /* Cities line — slightly more breathing room */
     .her-bharat-cities {
       font-size: clamp(0.95rem, 1.8vw, 1.1rem);
       line-height: 1.9;
       margin-bottom: 2rem;
     }
-
-    /* Mobile: tighten everything so nothing wraps awkwardly */
     @media (max-width: 480px) {
       .her-bharat-stat {
         font-size: clamp(1.4rem, 8vw, 2rem);
@@ -191,7 +181,7 @@
         <p>Before SuperMummy made a single video, we spent two weeks in the maternity wards of small-town Rajasthan — Ajmer, Alwar, Jhunjhunu. Watching. Listening. Running research groups with pregnant women and their mothers-in-law.</p>
 
         <blockquote>
-          She had a question. She didn't ask it. The ward was too crowded, the doctor too rushed, the prescription unreadable. That night she searched for the answer on her husband's phone.
+          She had a question. She didn't ask it. The ward was too crowded, the doctor too rushed, the prescription unreadable.
         </blockquote>
 
         <p>Every SuperMummy video is built for that moment. A question. Her question. A doctor who answers it. In a simple clinic — the kind she actually walks into, not the kind that looks good on camera.</p>
@@ -202,8 +192,6 @@
     </section>
 
     <!-- ===== BLOCK 4: HER BHARAT ===== -->
-    <!-- Updated March 17, 2026. Numbers from data.js — do not hardcode here. -->
-    <!-- Copy order: big stat → cities → Her Bharat name → declaration -->
     <section class="her-bharat">
       <div class="container">
 
@@ -216,16 +204,11 @@
 
         <p class="her-bharat-cities">
           Patna. Lucknow. Indore. Agra. Varanasi.<br>
-          And then — beyond the analytics — <span id="stat-invisible-pct"></span> of our viewers<br>
+          And then — beyond the analytics — <span id="stat-invisible-pct"></span>% of our viewers<br>
           come from towns that don't appear in any dashboard.
         </p>
 
-        <p class="her-bharat-name">We call them Her Bharat.</p>
-
-        <p class="her-bharat-truth">
-          This is not an underserved audience.<br>
-          <em>This is the audience.</em>
-        </p>
+        <p class="her-bharat-name">Her Bharat.</p>
 
       </div>
     </section>
@@ -248,7 +231,7 @@
             </p>
 
             <p style="font-size: 0.95rem; color: var(--dark-soft);">
-              Chanda has spent eight years building the platform she wishes had existed for the woman who didn't survive. She is not difficult to reach.
+              Chanda has spent eight years building the platform she wishes had existed for the woman who didn't survive. If something here moved you — let's talk.
             </p>
 
             <div class="founder-links">
@@ -304,7 +287,7 @@
       document.getElementById('stat-subs').textContent   = SM.subscribersEn;
 
       // Block 4 — Her Bharat
-      document.getElementById('stat-search-views').textContent  = SM.searchViewsEn;
+      document.getElementById('stat-search-views').textContent  = SM.searchViewsLakh;
       document.getElementById('stat-invisible-pct').textContent = SM.invisibleIndiaExact;
     });
   </script>
