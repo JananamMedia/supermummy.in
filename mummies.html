@@ -53,14 +53,16 @@
       <a href="index.html" class="nav-logo" aria-label="SuperMummy होमपेज">
         <img src="logo.png" alt="SuperMummy" style="height: 80px;">
       </a>
-      <button class="nav-toggle" aria-label="मेनू खोलें" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="मेनू खोलें"
+        onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
         <li><a href="index.html">About</a></li>
         <li><a href="work-with-us.html">Work With Us</a></li>
         <li><a href="mummies.html" class="active">Are You Pregnant?</a></li>
-        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g?sub_confirmation=1" target="_blank" rel="noopener" class="nav-cta">Channel देखें →</a></li>
+        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g?sub_confirmation=1"
+               target="_blank" rel="noopener" class="nav-cta">Channel देखें →</a></li>
       </ul>
     </div>
   </nav>
@@ -74,7 +76,7 @@
           रात को जब नींद नहीं आती और मन में सवाल होते हैं — हम यहाँ हैं।
         </h1>
         <p style="color: rgba(255,255,255,0.88); font-size: clamp(1rem, 2.5vw, 1.2rem); max-width: 600px; margin: 0 auto 1.8rem; font-family: var(--font-display);">
-          900+ डॉक्टर-verified वीडियो। हर सवाल का जवाब। हमेशा मुफ़्त।
+          <span data-field="totalVideos">900+</span> डॉक्टर-verified वीडियो। हर सवाल का जवाब। हमेशा मुफ़्त।
         </p>
         <a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g?sub_confirmation=1"
            target="_blank" rel="noopener"
@@ -92,7 +94,7 @@
           <div class="stat">
             <div class="stat-number" data-field="totalViews"></div>
             <div class="stat-label">बार देखा गया</div>
-            <div class="stat-note" data-note="lastUpdatedHi" data-suffix=" तक"></div>
+            <div class="stat-note" id="stat-note-updated-1"></div>
           </div>
 
           <div class="stat">
@@ -102,15 +104,15 @@
           </div>
 
           <div class="stat">
-            <div class="stat-number" data-field="yearsActive" data-suffix=" साल"></div>
+            <div class="stat-number" id="stat-years-founded"></div>
             <div class="stat-label">से डॉक्टर-verified</div>
-            <div class="stat-note">2016 से लगातार</div>
+            <div class="stat-note" id="stat-note-founded"></div>
           </div>
 
           <div class="stat">
             <div class="stat-number" data-field="subscribers"></div>
             <div class="stat-label">subscribers</div>
-            <div class="stat-note" data-note="lastUpdatedHi" data-suffix=" तक"></div>
+            <div class="stat-note" id="stat-note-updated-2"></div>
           </div>
 
         </div>
@@ -123,7 +125,7 @@
         <h2 style="text-align: center; margin-bottom: 0.4rem;">सबसे ज़्यादा देखे गए वीडियो</h2>
         <p style="text-align: center; color: var(--grey); margin-bottom: 0.3rem;">डॉक्टर-verified। हमेशा मुफ़्त।</p>
         <p class="stat-note" style="text-align: center; margin-bottom: 2rem;">
-          views — <span data-field="lastUpdatedHi"></span> तक
+          views — <span id="top-videos-date"></span> तक
         </p>
 
         <div class="video-grid" id="video-grid-top"></div>
@@ -132,7 +134,7 @@
           <a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g"
              target="_blank" rel="noopener"
              class="btn btn--pink">
-            सभी 900+ वीडियो देखें →
+            सभी <span data-field="totalVideos">900+</span> वीडियो देखें →
           </a>
         </div>
       </div>
@@ -147,17 +149,14 @@
           ज़रूरत पर काम आएंगी — फ़ोन में long press करके save करें
         </p>
 
-        <!-- Pregnancy section -->
         <p style="font-size: 1rem; font-weight: 700; color: var(--pink); margin-bottom: 1.2rem;">
           🤰 प्रेगनेंसी के दौरान
         </p>
 
-        <!-- Test cards mini heading -->
         <p style="font-size: 0.85rem; font-weight: 600; color: var(--grey); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem;">
           जाँच चेकलिस्ट (Medical Tests) — तीनों तिमाही के लिए
         </p>
 
-        <!-- T1 T2 T3 — 3 column -->
         <div class="saveable-grid saveable-grid--3" style="margin-bottom: 2rem;">
           <div class="saveable-card">
             <img src="SuperMummy_1_T1_Tests.jpg" alt="पहली तिमाही की ज़रूरी जाँचें — Week 1–12" loading="lazy">
@@ -173,12 +172,10 @@
           </div>
         </div>
 
-        <!-- Safety divider -->
         <p style="font-size: 0.85rem; font-weight: 600; color: var(--grey); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem;">
           आपकी और आपके बच्चे की सुरक्षा के लिए (Safety Guide)
         </p>
 
-        <!-- Nutrition + Red Flags — 2 column -->
         <div class="saveable-grid saveable-grid--2" style="margin-bottom: 3rem;">
           <div class="saveable-card">
             <img src="SuperMummy_4_Nutrition.jpg" alt="प्रेगनेंसी में क्या खाएँ, क्या नहीं" loading="lazy">
@@ -190,12 +187,10 @@
           </div>
         </div>
 
-        <!-- Postpartum section -->
         <p style="font-size: 1rem; font-weight: 700; color: var(--pink); margin-bottom: 1.5rem;">
           👶 डिलीवरी के बाद
         </p>
 
-        <!-- Postpartum copy -->
         <div style="max-width: 680px; margin: 0 auto 2rem; text-align: center;">
           <p style="font-family: var(--font-hindi); font-size: clamp(1rem, 2.2vw, 1.15rem); line-height: 1.8; color: var(--dark-soft);">
             जब घर में नई जान आती है, तो सबका ध्यान उस पर होता है — आपका अपना भी।
@@ -208,7 +203,6 @@
           </p>
         </div>
 
-        <!-- Single postpartum card — centred -->
         <div style="max-width: 360px; margin: 0 auto;">
           <div class="saveable-card">
             <img src="SuperMummy_6_Postpartum_Red_Flags.jpg" alt="डिलीवरी के बाद ख़तरे के संकेत" loading="lazy">
@@ -293,33 +287,18 @@
       </div>
     </section>
 
-    <!-- ===== BLOCK 6: YOUTUBE MEMBERSHIP (hidden — uncomment when live) =====
-    <section class="section section--white" style="text-align: center;">
-      <div class="container" style="max-width: 600px;">
-        <h2>YouTube Membership</h2>
-        <p style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 0.6rem;">
-          SuperMummy की deeper community का हिस्सा बनें।
-        </p>
-        <p style="color: var(--grey); margin-bottom: 1.5rem;">जल्द आ रहा है — details coming soon</p>
-        <a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g"
-           target="_blank" rel="noopener"
-           class="btn btn--outline">
-          Channel देखें →
-        </a>
-      </div>
-    </section>
-    ===== -->
-
-    <!-- ===== BLOCK 7: FIND US ===== -->
+    <!-- ===== BLOCK 6: FIND US ===== -->
     <section class="section section--white">
       <div class="container">
         <h2 style="text-align: center; margin-bottom: 2rem;">हमसे जुड़ें</h2>
         <div class="social-row">
-          <a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g" target="_blank" rel="noopener" class="social-card">
+          <a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g"
+             target="_blank" rel="noopener" class="social-card">
             <div class="social-icon social-icon--yt">▶</div>
-            <div class="social-text"><strong>YouTube</strong><br>900+ वीडियो। हर सवाल का जवाब।</div>
+            <div class="social-text"><strong>YouTube</strong><br><span data-field="totalVideos">900+</span> वीडियो। हर सवाल का जवाब।</div>
           </a>
-          <a href="https://www.facebook.com/share/1888aEXNYU/" target="_blank" rel="noopener" class="social-card">
+          <a href="https://www.facebook.com/share/1888aEXNYU/"
+             target="_blank" rel="noopener" class="social-card">
             <div class="social-icon social-icon--fb">f</div>
             <div class="social-text"><strong>Facebook</strong><br>हमारे group में आइए। सवाल पूछिए।</div>
           </a>
@@ -352,26 +331,29 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-
       if (typeof SM === 'undefined') return;
 
-      // --- Populate stat numbers ---
+      // --- All data-field elements ---
       document.querySelectorAll('[data-field]').forEach(function (el) {
         var key = el.getAttribute('data-field');
-        var suffix = el.getAttribute('data-suffix') || '';
-        if (SM[key] !== undefined) {
-          el.textContent = SM[key] + suffix;
-        }
+        if (SM[key] !== undefined) el.textContent = SM[key];
       });
 
-      // --- Populate stat notes with date ---
-      document.querySelectorAll('[data-note]').forEach(function (el) {
-        var key = el.getAttribute('data-note');
-        var suffix = el.getAttribute('data-suffix') || '';
-        if (SM[key] !== undefined) {
-          el.textContent = SM[key] + suffix;
-        }
-      });
+      // --- "2018 से डॉक्टर-verified" stat ---
+      var statYears = document.getElementById('stat-years-founded');
+      if (statYears) statYears.textContent = SM.yearFounded;
+      var statNoteFounded = document.getElementById('stat-note-founded');
+      if (statNoteFounded) statNoteFounded.textContent = SM.yearFounded + ' से लगातार';
+
+      // --- "March 17, 2026 तक" notes ---
+      var note1 = document.getElementById('stat-note-updated-1');
+      if (note1) note1.textContent = SM.lastUpdated + ' तक';
+      var note2 = document.getElementById('stat-note-updated-2');
+      if (note2) note2.textContent = SM.lastUpdated + ' तक';
+
+      // --- Top videos date ---
+      var topVideosDate = document.getElementById('top-videos-date');
+      if (topVideosDate) topVideosDate.textContent = SM.lastUpdated;
 
       // --- Top 3 videos ---
       var grid = document.getElementById('video-grid-top');
@@ -379,7 +361,9 @@
         SM.topVideos.slice(0, 3).forEach(function (video) {
           var match = video.url.match(/[?&]v=([^&]+)/);
           var videoId = match ? match[1] : '';
-          var thumbUrl = videoId ? 'https://img.youtube.com/vi/' + videoId + '/mqdefault.jpg' : '';
+          var thumbUrl = videoId
+            ? 'https://img.youtube.com/vi/' + videoId + '/mqdefault.jpg'
+            : '';
           var card = document.createElement('a');
           card.href = video.url;
           card.target = '_blank';
