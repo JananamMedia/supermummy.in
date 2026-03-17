@@ -27,200 +27,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="data.js" defer></script>
 
-  <style>
-    /* --- About page specific styles --- */
-
-    .about-lede {
-      padding-top: calc(var(--nav-height) + var(--section-pad));
-      padding-bottom: var(--section-pad);
-      background: var(--cream);
-      text-align: center;
-    }
-
-    .about-lede-numbers {
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: clamp(0.95rem, 2vw, 1.15rem);
-      color: var(--grey);
-      letter-spacing: 0.03em;
-      margin-bottom: 0;
-    }
-
-    .about-lede-numbers span {
-      color: var(--pink);
-      font-weight: 700;
-    }
-
-    .about-lede-numbers .divider {
-      color: var(--grey-light);
-      margin: 0 0.6rem;
-    }
-
-    .her-bharat {
-      background: var(--dark);
-      padding: var(--section-pad) 0;
-      text-align: center;
-    }
-
-    .her-bharat-eyebrow {
-      font-family: var(--font-body);
-      font-weight: 600;
-      font-size: 0.85rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--pink-light);
-      margin-bottom: 1.5rem;
-    }
-
-    .her-bharat-stat {
-      font-family: var(--font-display);
-      font-weight: 800;
-      font-size: clamp(2.2rem, 6vw, 4rem);
-      color: var(--white);
-      line-height: 1.1;
-      margin-bottom: 0.5rem;
-    }
-
-    .her-bharat-stat span {
-      color: var(--pink-light);
-    }
-
-    .her-bharat-name {
-      font-family: var(--font-display);
-      font-style: italic;
-      font-size: clamp(1.8rem, 5vw, 3.2rem);
-      font-weight: 700;
-      color: var(--pink-light);
-      margin-bottom: 1.5rem;
-    }
-
-    .her-bharat-cities {
-      font-family: var(--font-body);
-      font-size: clamp(0.9rem, 1.8vw, 1.05rem);
-      color: var(--grey-light);
-      line-height: 2;
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .her-bharat-truth {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-      color: var(--white);
-      max-width: 500px;
-      margin: 0 auto;
-      line-height: 1.5;
-    }
-
-    .her-bharat-truth em {
-      color: var(--pink-light);
-      font-style: normal;
-    }
-
-    .founder-block {
-      background: var(--white);
-      padding: var(--section-pad) 0;
-    }
-
-    .founder-inner {
-      max-width: 800px;
-      margin: 0 auto;
-      display: flex;
-      gap: 3rem;
-      align-items: flex-start;
-    }
-
-    .founder-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: var(--cream-dark);
-      flex-shrink: 0;
-      overflow: hidden;
-    }
-
-    .founder-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .founder-text h3 {
-      font-size: clamp(1.3rem, 3vw, 1.8rem);
-      margin-bottom: 0.25rem;
-    }
-
-    .founder-role {
-      font-size: 0.9rem;
-      color: var(--grey);
-      margin-bottom: 1.25rem;
-    }
-
-    .founder-truth {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      line-height: 1.6;
-      color: var(--dark);
-      border-left: 4px solid var(--pink);
-      padding: 1rem 1.25rem;
-      background: rgba(232, 0, 111, 0.03);
-      border-radius: 0 8px 8px 0;
-      margin-bottom: 1.25rem;
-    }
-
-    .founder-links {
-      display: flex;
-      gap: 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    .closing-block {
-      background: var(--cream);
-      padding: var(--section-pad) 0;
-      text-align: center;
-    }
-
-    .closing-block p {
-      font-family: var(--font-display);
-      font-size: clamp(1rem, 2vw, 1.2rem);
-      color: var(--grey);
-      margin-bottom: 0.5rem;
-    }
-
-    .closing-block .closing-line {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      color: var(--dark);
-      margin-bottom: 2rem;
-    }
-
-    @media (max-width: 700px) {
-      .founder-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .founder-truth {
-        text-align: left;
-      }
-      .founder-links {
-        justify-content: center;
-      }
-      .about-lede-numbers {
-        display: flex;
-        flex-direction: column;
-        gap: 0.4rem;
-        align-items: center;
-      }
-      .about-lede-numbers .divider {
-        display: none;
-      }
-    }
-  </style>
-
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
@@ -279,12 +85,31 @@
 
   <main>
 
-    <!-- ===== BLOCK 1: THE NUMBER BEFORE THE STORY ===== -->
+    <!-- ===== BLOCK 1: NUMBERS — all data from data.js via JS below ===== -->
     <section class="about-lede">
       <div class="container">
-        <p class="about-lede-numbers" id="about-lede-numbers">
-          <!-- Populated by JS below -->
-        </p>
+
+        <div class="about-lede-grid">
+          <div class="about-lede-stat">
+            <span class="about-lede-number" id="stat-views"></span>
+            <span class="about-lede-label">Total Views</span>
+          </div>
+          <div class="about-lede-stat">
+            <span class="about-lede-number" id="stat-videos"></span>
+            <span class="about-lede-label">Doctor-Verified Videos</span>
+          </div>
+          <div class="about-lede-stat">
+            <span class="about-lede-number" id="stat-years"></span>
+            <span class="about-lede-label">Years Continuously<br>Doctor-Verified</span>
+          </div>
+          <div class="about-lede-stat">
+            <span class="about-lede-number" id="stat-subs"></span>
+            <span class="about-lede-label">Subscribers &amp; Growing</span>
+          </div>
+        </div>
+
+        <p class="about-lede-tagline">All in Hindi. All free. Always.</p>
+
       </div>
     </section>
 
@@ -391,7 +216,7 @@
         <p style="font-size: 0.95rem; color: var(--grey); margin-bottom: 2rem; font-family: var(--font-body);">
           If something on this page made you curious, that curiosity is worth a conversation.
         </p>
-        <a href="work-with-us.html#contact" class="btn btn--pink">Get In Touch →</a>
+        <a href="work-with-us.html" class="btn btn--dark">Let's Build Together →</a>
       </div>
     </section>
 
@@ -414,21 +239,16 @@
     </div>
   </footer>
 
-  <!-- ===== DATA INJECTION ===== -->
+  <!-- ===== DATA INJECTION FROM data.js ===== -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Populate the lede numbers from data.js
-      const lede = document.getElementById('about-lede-numbers');
-      if (lede && typeof SM !== 'undefined') {
-        lede.innerHTML =
-          '<span>' + SM.totalViewsEn + ' views</span>' +
-          '<span class="divider">·</span>' +
-          '<span>' + SM.totalVideos + ' doctor-verified videos</span>' +
-          '<span class="divider">·</span>' +
-          '<span>' + SM.yearsActive + ' years</span>' +
-          '<span class="divider">·</span>' +
-          'All in Hindi. All free.';
-      }
+      if (typeof SM === 'undefined') return;
+
+      // Block 1 — four stats, all from data.js
+      document.getElementById('stat-views').textContent  = SM.totalViewsEn;
+      document.getElementById('stat-videos').textContent = SM.totalVideos;
+      document.getElementById('stat-years').textContent  = SM.yearsActive + ' Years';
+      document.getElementById('stat-subs').textContent   = SM.subscribersEn;
     });
   </script>
 
