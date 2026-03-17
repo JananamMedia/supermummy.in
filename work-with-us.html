@@ -631,4 +631,28 @@
           </div>
           <div class="chanda-info">
             <h3>Chanda Chaudhary</h3>
-            <p class="chanda-role">Founder, Jananam Media Pvt. Ltd.
+            <p class="chanda-role">Founder, Jananam Media Pvt. Ltd.</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.facebook.com/share/1888aEXNYU/" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://jananam.co" target="_blank" rel="noopener">Jananam</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('[data-field]').forEach(el => {
+        const key = el.getAttribute('data-field');
+        if (SM && SM[key] !== undefined) el.textContent = SM[key];
+      });
+      if (SM && SM.topCities && SM.tier1Views) {
+        const patna   = SM.topCities[0].viewsExact;
+        const lucknow = SM.topCities[1].viewsExact;
+        const combined = patna + lucknow;
+        const fmt = n => (n / 1000000).toFixed(1) + ' million';
+        const el = document.getElementById('patna-lucknow-views');
+        if (el) el.textContent = fmt(combined);
