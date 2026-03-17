@@ -4,21 +4,332 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work With Us — SuperMummy | India's Leading Hindi Pregnancy Health Channel</title>
-  <meta name="description" content="Partner with SuperMummy — India's most trusted Hindi pregnancy health channel. 10.4 crore+ views, 900+ doctor-verified videos, reaching women across the Hindi belt. Medical professionals, brands, and collaborators welcome.">
+  <meta name="description" content="Partner with SuperMummy — India's most trusted Hindi pregnancy health channel. 11.4 million views in 28 days, 80.4% search-driven, reaching women across the Hindi belt at the moment of need.">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Work With SuperMummy — India's Leading Hindi Pregnancy Health Channel">
-  <meta property="og:description" content="10.4 crore+ views. 900+ doctor-verified videos. The right content met the right audience in the right language.">
+  <meta property="og:description" content="11.4 million views in 28 days. 80.4% from YouTube Search. The right content met the right audience in the right language.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://supermummy.in/work-with-us.html">
   <meta property="og:site_name" content="SuperMummy">
 
   <link rel="canonical" href="https://supermummy.in/work-with-us.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Hind:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <script src="data.js" defer></script>
 
-  <!-- Chart.js for hockey stick -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    .data-window {
+      display: inline-block;
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pink, #E8006F);
+      border: 1px solid rgba(232,0,111,0.25);
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat-hero {
+      margin-bottom: 1.5rem;
+    }
+    .stat-hero__number {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(3.5rem, 10vw, 6.5rem);
+      font-weight: 700;
+      color: var(--pink, #E8006F);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    .stat-hero__label {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      font-weight: 400;
+      color: var(--dark, #1A0A10);
+      margin-top: 0.4rem;
+      line-height: 1.4;
+    }
+
+    .geo-block { max-width: 860px; margin: 0 auto; }
+    .geo-cities {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 600;
+      color: var(--dark, #1A0A10);
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .geo-cities span { color: var(--pink, #E8006F); }
+    .geo-statement {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--dark, #1A0A10);
+      margin-bottom: 1rem;
+    }
+    .geo-callout {
+      background: var(--dark, #1A0A10);
+      color: #FFF8F2;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      font-family: var(--font-body, 'Hind', sans-serif);
+    }
+    .geo-callout__number {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--pink, #E8006F);
+      line-height: 1;
+    }
+    .geo-callout__text {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      opacity: 0.85;
+    }
+    .geo-callout__text strong { color: #fff; opacity: 1; }
+    .geo-invisible {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,248,242,0.15);
+    }
+
+    .stat-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    @media (max-width: 600px) { .stat-pair { grid-template-columns: 1fr; } }
+
+    .stat-card {
+      background: var(--cream, #FFF8F2);
+      border: 1px solid rgba(232,0,111,0.12);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .stat-card--dark { background: var(--dark, #1A0A10); }
+    .stat-card__number {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      font-weight: 700;
+      color: var(--pink, #E8006F);
+      line-height: 1;
+    }
+    .stat-card__label {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-top: 0.4rem;
+      color: var(--dark, #1A0A10);
+    }
+    .stat-card--dark .stat-card__label { color: rgba(255,248,242,0.75); }
+
+    .search-block { max-width: 860px; margin: 0 auto; }
+    .search-explanation {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--dark, #1A0A10);
+      margin-bottom: 1.25rem;
+    }
+    .search-explanation strong { color: var(--pink, #E8006F); }
+
+    .methodology-block { max-width: 860px; margin: 0 auto; }
+    .methodology-quote {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(1.15rem, 2.5vw, 1.4rem);
+      font-style: italic;
+      line-height: 1.7;
+      color: var(--dark, #1A0A10);
+      border-left: 3px solid var(--pink, #E8006F);
+      padding-left: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .yt-comment-wrap { margin: 2.5rem 0; }
+    .yt-comment-card {
+      background: #0f0f0f;
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      max-width: 480px;
+    }
+    .yt-comment-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+    .yt-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .yt-avatar svg { width: 22px; height: 22px; fill: #aaa; }
+    .yt-comment-meta { display: flex; flex-direction: column; }
+    .yt-handle { font-size: 0.8rem; font-weight: 500; color: #f1f1f1; font-family: 'Hind', sans-serif; }
+    .yt-timestamp { font-size: 0.75rem; color: #aaa; font-family: 'Hind', sans-serif; }
+    .yt-comment-text {
+      font-size: 0.9rem;
+      line-height: 1.65;
+      color: #f1f1f1;
+      font-family: 'Hind', sans-serif;
+    }
+    .yt-comment-translation {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.85rem;
+      font-style: italic;
+      color: rgba(26,10,16,0.5);
+      margin-top: 0.6rem;
+    }
+
+    .three-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    @media (max-width: 700px) { .three-stats { grid-template-columns: 1fr; } }
+
+    .partnership-block { max-width: 860px; margin: 0 auto; }
+    .partnership-lead {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 600;
+      color: var(--dark, #1A0A10);
+      margin-bottom: 1.25rem;
+      line-height: 1.3;
+    }
+    .partnership-body {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--dark, #1A0A10);
+      margin-bottom: 1rem;
+    }
+    .disclaimer-callout {
+      background: rgba(232,0,111,0.06);
+      border: 1px solid rgba(232,0,111,0.2);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin: 1.75rem 0;
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--dark, #1A0A10);
+      font-style: italic;
+    }
+    .disclaimer-callout strong { color: var(--pink, #E8006F); font-style: normal; }
+    .lives-line {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+      font-style: normal;
+      font-weight: 600;
+      color: var(--dark, #1A0A10);
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+
+    .partner-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) { .partner-cols { grid-template-columns: 1fr; } }
+    .partner-col { border-radius: 10px; padding: 1.25rem 1.5rem; }
+    .partner-col--yes {
+      background: rgba(232,0,111,0.05);
+      border: 1px solid rgba(232,0,111,0.2);
+    }
+    .partner-col--no {
+      background: rgba(26,10,16,0.04);
+      border: 1px solid rgba(26,10,16,0.12);
+    }
+    .partner-col__label {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .partner-col--yes .partner-col__label { color: var(--pink, #E8006F); }
+    .partner-col--no .partner-col__label { color: rgba(26,10,16,0.45); }
+    .partner-col ul { list-style: none; padding: 0; margin: 0; }
+    .partner-col ul li {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      padding: 0.35rem 0;
+      color: var(--dark, #1A0A10);
+      border-bottom: 1px solid rgba(26,10,16,0.07);
+    }
+    .partner-col ul li:last-child { border-bottom: none; }
+
+    .mediakit-section { text-align: center; max-width: 600px; margin: 0 auto; }
+    .mediakit-section p {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 1rem;
+      color: rgba(26,10,16,0.6);
+      margin-bottom: 1.75rem;
+      line-height: 1.6;
+    }
+
+    .chanda-block { display: flex; gap: 2rem; align-items: flex-start; }
+    .chanda-photo img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .chanda-info h3 {
+      font-family: var(--font-display, 'Playfair Display', serif);
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+    .chanda-role {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--pink, #E8006F);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .chanda-links { display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    .chanda-links a {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--pink, #E8006F);
+      text-decoration: none;
+    }
+    .chanda-links a:hover { text-decoration: underline; }
+    @media (max-width: 600px) { .chanda-block { flex-direction: column; } }
+
+    .section-label {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pink, #E8006F);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -57,203 +368,256 @@
 
   <main>
 
-    <!-- ===== BLOCK 1: THE PROVOCATION ===== -->
+    <!-- ===== BLOCK 1: GEOGRAPHY ===== -->
     <section class="hero section--cream">
       <div class="container">
-        <p class="provocation">
-          Every day, roughly 80,000 Indian women begin their pregnancy journey. We bring them doctor-verified answers — in Hindi, for free, for eight years now. Here's what that looks like.
+        <div class="geo-block">
+
+          <span class="section-label">The Audience</span>
+
+          <div class="stat-hero">
+            <div class="stat-hero__number">90.5%</div>
+            <div class="stat-hero__label">of our audience comes from outside India's six major metros.</div>
+          </div>
+
+          <p class="geo-cities">
+            <span>Patna.</span> <span>Lucknow.</span> <span>Indore.</span> <span>Agra.</span> <span>Varanasi.</span>
+          </p>
+          <p class="geo-statement" style="opacity:0.65; font-size:0.95rem;">
+            These are not footnotes in our analytics. These are our top five cities.
+          </p>
+
+          <div class="geo-callout">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+              <div>
+                <div class="geo-callout__number" id="patna-lucknow-views">2.1 million</div>
+                <div class="geo-callout__text">
+                  <strong>Patna + Lucknow</strong> combined views in 28 days —
+                  more than all six Tier 1 metros combined.
+                </div>
+              </div>
+              <div style="border-left:1px solid rgba(255,248,242,0.15); padding-left:2rem;">
+                <div class="geo-callout__number" data-field="invisibleIndiaExact">30.1%</div>
+                <div class="geo-callout__text">
+                  come from towns that don't appear in any dashboard.<br><br>
+                  <strong>We call them Her Bharat.</strong><br>
+                  They are not an underserved audience. They are the audience.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-pair">
+            <div class="stat-card">
+              <div class="stat-card__number" data-field="hindiBeltPct">58.0%</div>
+              <div class="stat-card__label">from the Hindi belt — UP, Bihar, MP, Rajasthan and adjoining states</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__number" data-field="indiaPct">97.11%</div>
+              <div class="stat-card__label">India-domestic. This is not a diaspora channel.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOCK 2: TRAFFIC ARCHITECTURE ===== -->
+    <section class="section section--white">
+      <div class="container">
+        <div class="search-block">
+
+          <span class="section-label">How They Find Us</span>
+
+          <div class="stat-hero">
+            <div class="stat-hero__number" data-field="searchViewsPct">80.4%</div>
+            <div class="stat-hero__label">of all views come from YouTube Search.</div>
+          </div>
+
+          <p class="search-explanation">
+            Not the Shorts feed. Not a viral moment. Not the algorithm deciding she might be interested.
+          </p>
+          <p class="search-explanation">
+            She opened YouTube. Typed a pregnancy question in Hindi. Found a doctor answering it on SuperMummy.
+            <strong><span data-field="searchViewsEn">9.2 million</span> times in 28 days.</strong>
+          </p>
+          <p class="search-explanation" style="opacity:0.6; font-size:0.92rem; margin-top:1.5rem;">
+            The remaining <span data-field="shortsFeedPct">13.2%</span> comes from the Shorts feed —
+            and even there, our average retention is <span data-field="shortsAvgRetention">106.9%</span>.
+            Viewers are replaying.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOCK 3: THE CONTENT METHODOLOGY ===== -->
+    <section class="section section--cream">
+      <div class="container">
+        <div class="methodology-block">
+
+          <span class="section-label">Why They Stay</span>
+
+          <div class="stat-hero">
+            <div class="stat-hero__number" data-field="searchRetention">84.98%</div>
+            <div class="stat-hero__label">average retention on search traffic.</div>
+          </div>
+
+          <p class="search-explanation">Here is why.</p>
+
+          <div class="methodology-quote">
+            Every SuperMummy video is a doctor answering one question — in exactly the time it takes
+            to answer it. If the answer is 20 seconds, the video is 20 seconds. If it takes four minutes,
+            it is four minutes. There is no introduction. There is no channel branding in the first three
+            seconds. There is a question and a doctor.
+          </div>
+
+          <p class="search-explanation">
+            We do not make videos to grow the channel. We make videos because she is searching for an
+            answer right now, and a qualified doctor should be the one who gives it to her.
+          </p>
+
+          <!-- YouTube Comment Card -->
+          <div class="yt-comment-wrap">
+            <div class="yt-comment-card">
+              <div class="yt-comment-header">
+                <div class="yt-avatar">
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+                  </svg>
+                </div>
+                <div class="yt-comment-meta">
+                  <span class="yt-handle">@vikasmishra01990</span>
+                  <span class="yt-timestamp">2 days ago (edited)</span>
+                </div>
+              </div>
+              <div class="yt-comment-text">
+                बहुत ही सुंदर ब्याख्या किया आपने<br>
+                पूरी जानकारी थोड़े समय में कोई बकवास नही<br>
+                अति सुंदर<br>
+                धन्यवाद
+              </div>
+            </div>
+            <p class="yt-comment-translation">"Complete information. Short time. No nonsense."</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOCK 4: SCALE ===== -->
+    <section class="section section--white">
+      <div class="container">
+
+        <span class="section-label">The Scale</span>
+
+        <div class="three-stats">
+          <div class="stat-card">
+            <div class="stat-card__number" data-field="monthlyViewsExact">11,455,481</div>
+            <div class="stat-card__label">
+              views in the last 28 days<br>
+              <span style="font-size:0.8rem; opacity:0.5;" data-field="window28Days">Feb 16 – Mar 15, 2026</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number" data-field="yoyGrowth2526">+1,516%</div>
+            <div class="stat-card__label">
+              year-on-year<br>
+              <span style="font-size:0.8rem; opacity:0.5;">January 2024 → January 2026</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card__number" data-field="longFormVsShorts">32x</div>
+            <div class="stat-card__label">more revenue per view on long-form than on Shorts — as the content she needs grows longer, so does the value</div>
+          </div>
+        </div>
+
+        <p style="font-family:'Hind',sans-serif; font-size:0.8rem; color:rgba(26,10,16,0.4); margin-top:0.25rem;">
+          Data window: <span data-field="window28Days">Feb 16 – Mar 15, 2026</span> · Updated monthly
         </p>
+
       </div>
     </section>
 
-    <!-- ===== BLOCK 2: THE FOUNDING METHOD ===== -->
-    <section class="section section--white">
-      <div class="container" style="max-width: 800px; text-align: center;">
-        <p style="font-family: var(--font-display); font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-style: italic; line-height: 1.6;">We spent two weeks in Rajasthan maternity wards before making a single video. That research shaped everything that followed.</p>
-        <a href="index.html" style="display: inline-block; margin-top: 1rem; font-weight: 600;">Read the full story →</a>
-      </div>
-    </section>
-
-    <!-- ===== BLOCK 3: THE TRACTION ===== -->
+    <!-- ===== BLOCK 5: PARTNERSHIP TERMS ===== -->
     <section class="section section--cream">
       <div class="container">
+        <div class="partnership-block">
 
-        <div class="chart-wrap">
-          <canvas id="growthChart" aria-label="SuperMummy annual views growth chart 2018 to 2026"></canvas>
-          <p style="font-size: 0.8rem; color: var(--grey-light); margin-top: 0.75rem; text-align: right;">*2026: Jan–March YouTube data</p>
+          <span class="section-label">Partnerships</span>
+
+          <p class="partnership-lead">We do not take advertising.<br>We take partnerships.</p>
+
+          <p class="partnership-body">
+            Editorial independence is not a negotiating position. It is the reason
+            <span data-field="subscribersExact">149,628</span> subscribers trust us with the most
+            anxious moments of their pregnancies. The moment a sponsor shapes our content,
+            the trust dissolves. And the trust is the product.
+          </p>
+
+          <div class="disclaimer-callout">
+            <strong>Every video carries a medical disclaimer</strong> —
+            "Each pregnancy is unique. Recommendations and guidelines in this video are generic
+            and you are advised to consult your doctor for your individual care &amp; health." —
+            in English and Hindi, on every video, for eight years without exception.
+            <p class="lives-line">Lives depend on it.</p>
+          </div>
+
+          <p class="partnership-body">
+            <strong>What we offer:</strong> reach that is search-verified, intent-driven, and concentrated
+            in exactly the geographies and demographics that Hindi maternal health brands need to reach.
+          </p>
+          <p class="partnership-body">
+            <strong>What we require:</strong> that nothing goes in front of our audience that a qualified
+            doctor has not cleared.
+          </p>
+
+          <div class="partner-cols">
+            <div class="partner-col partner-col--yes">
+              <div class="partner-col__label">The right partners</div>
+              <ul>
+                <li>Maternal nutrition &amp; prenatal supplements</li>
+                <li>Diagnostic centres &amp; pathology chains</li>
+                <li>Pregnancy-safe personal care</li>
+                <li>Maternal health insurance</li>
+                <li>Telehealth platforms serving Hindi-speaking women</li>
+                <li>Baby care in the first year</li>
+              </ul>
+            </div>
+            <div class="partner-col partner-col--no">
+              <div class="partner-col__label">The wrong partners</div>
+              <ul>
+                <li>Weight loss products</li>
+                <li>Fast food</li>
+                <li>Any health claim we cannot verify medically</li>
+                <li>Anything we would not show to a woman in her first trimester</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
-
-        <blockquote style="text-align: center; border-left: none; background: none; padding: 0; margin-top: 1rem;">
-          This is what happened when the right content met the right audience in the right language.
-        </blockquote>
-
-        <div class="stats" id="stats-traction">
-          <div class="stat">
-            <div class="stat-number" data-field="totalViewsEn">10.4 Crore+</div>
-            <div class="stat-label">Lifetime Views</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" data-field="monthlyViewsEn">1.09 Crore</div>
-            <div class="stat-label">Views / 28 Days</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" data-field="peakDayEn">4.66 Lakh</div>
-            <div class="stat-label">Peak Day (March 9, 2026)</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number" data-field="totalVideos">900+</div>
-            <div class="stat-label">Doctor-Verified Videos</div>
-          </div>
-          <div class="stat">
-            <div class="stat-number">8 Years</div>
-            <div class="stat-label">Continuously Doctor-Verified</div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- ===== BLOCK 4: THE MARKET ===== -->
-    <section class="section section--white">
-      <div class="container" style="max-width: 800px;">
-
-        <div class="market-facts">
-          <div class="market-fact">
-            <p>
-              29 million Indian women register a pregnancy every year.
-              <span class="source">— MoHFW Year-End Review, 2025</span>
-            </p>
-          </div>
-          <div class="market-fact">
-            <p>
-              70% of specialist posts at rural health centres are vacant.
-              <span class="source">— NMC, 2025/26</span>
-            </p>
-          </div>
-          <div class="market-fact">
-            <p>
-              Only 15% of pregnancy health videos on YouTube are classified as reliable.
-              <span class="source">— Journal of Medical Internet Research, 2025</span>
-            </p>
-          </div>
-          <div class="market-fact">
-            <p>
-              Hindi is the first language of 600 million Indians — and the thinking language of hundreds of millions more.
-            </p>
-          </div>
+    <!-- ===== BLOCK 6: MEDIA KIT ===== -->
+    <section class="section section--white" style="text-align:center;">
+      <div class="container">
+        <div class="mediakit-section">
+          <span class="section-label">Media Kit</span>
+          <h2>Everything you need. One page.</h2>
+          <p>
+            Every number current as of <span data-field="lastUpdated">March 17, 2026</span>.
+            Data window: <span data-field="window28Days">Feb 16 – Mar 15, 2026</span>.
+            Downloads as a PDF.
+          </p>
+          <a href="media-kit.html" class="btn btn--pink" target="_blank">Download Media Kit →</a>
         </div>
-
-        <blockquote style="text-align: center; border-left: none; background: none;">
-          This is the gap SuperMummy exists to fill. We are eight years in. We have only just begun.
-        </blockquote>
-
       </div>
     </section>
 
-    <!-- ===== BLOCK 5: THE AUDIENCE ===== -->
+    <!-- ===== BLOCK 7: CHANDA ===== -->
     <section class="section section--cream">
-      <div class="container">
-
-        <h2>The Audience</h2>
-        <p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 2rem;">Our audience is not who you'd expect.</p>
-
-        <div class="three-col">
-
-          <div>
-            <h3>Where They Are</h3>
-            <ul>
-              <li>43.5% Tier 2 cities — Patna, Agra, Varanasi, Kanpur, Ludhiana</li>
-              <li>Significant untracked audience from towns too small to appear in YouTube analytics</li>
-              <li>Concentrated in Hindi belt: UP, Bihar, MP, Rajasthan</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Who They Are</h3>
-            <ul>
-              <li>Women aged 22–34</li>
-              <li>First or second pregnancy</li>
-              <li>Hindi-speaking, smartphone-owning</li>
-              <li>44.4% of commenters are confirmed pregnant women seeking specific advice</li>
-              <li>Watching late at night, privately, on their own phone or husband's — with serious intent</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Why They Trust Us</h3>
-            <ul>
-              <li>Doctor-verified from day one, for eight years</li>
-              <li>Simple clinics, not polished studios — because she walks into real, not professional</li>
-              <li>No sponsors have ever shaped our content</li>
-              <li>900+ videos. Adding new content weekly.</li>
-            </ul>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== BLOCK 6: WHO WE WORK WITH (TABS) ===== -->
-    <section class="section section--white">
-      <div class="container" style="max-width: 900px;">
-
-        <h2>Who We Work With</h2>
-
-        <div class="tabs">
-          <div class="tab-buttons">
-            <button class="tab-btn active" onclick="switchTab(event, 'tab-medical')">Medical Professionals</button>
-            <button class="tab-btn" onclick="switchTab(event, 'tab-brands')">Brands</button>
-            <button class="tab-btn" onclick="switchTab(event, 'tab-curious')">Curious</button>
-          </div>
-
-          <!-- TAB 1: Medical -->
-          <div class="tab-content active" id="tab-medical">
-            <p><strong>What we offer:</strong> reach no clinic can build alone. Medical episodes regularly reach 1–2 lakh views per video.</p>
-            <p><strong>What they offer:</strong> verified authority.</p>
-            <p><strong>Format:</strong> Dr Se Poocho — doctor in real clinic, answering her question.</p>
-            <p style="margin-top: 1.5rem; font-weight: 600;">Who should call:</p>
-            <p>Gynaecologists, obstetricians, nutritionists, paediatricians, lactation consultants.</p>
-          </div>
-
-          <!-- TAB 2: Brands -->
-          <div class="tab-content" id="tab-brands">
-            <p style="font-weight: 600; font-size: 1.05rem;">We do not take advertising. We take partnerships.</p>
-            <p><strong>The right brands:</strong> diagnostic chains (Dr Lal PathLabs, Thyrocare), pharma in maternal nutrition (Mankind, Cipla consumer, Abbott mass-market), FMCG with rural distribution (Dabur, Emami), maternal health insurance (Star Health, Niva Bupa), telecom (Jio, Airtel).</p>
-            <p><strong>What we offer:</strong> not a mention — a relationship. Trust, carefully extended.</p>
-            <p><strong>What we require:</strong> editorial independence. Always. Without exception.</p>
-          </div>
-
-          <!-- TAB 3: Curious -->
-          <div class="tab-content" id="tab-curious">
-            <blockquote>
-              We are not fundraising. We are building — carefully, deliberately, with a very clear map of where we are going.
-            </blockquote>
-            <p><strong>Jananam Media portfolio:</strong> SuperMummy · Har Din MahaShivPuran · Ardaas Publishing</p>
-            <p><strong>Phase 1 monetisation underway:</strong> WhatsApp Sakhi · YouTube membership · selective brand partnerships</p>
-            <p style="margin-top: 1.5rem;">If you are looking for a media property already trusted by millions, already growing without external capital, already sitting at the intersection of India's largest unserved content market — we should talk.</p>
-            <blockquote>
-              Not because we need to. Because the right conversation, at the right time, is worth having.
-            </blockquote>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ===== BLOCK 7: MEDIA KIT ===== -->
-    <section class="section section--cream" style="text-align: center;">
-      <div class="container">
-        <h2>Media Kit</h2>
-        <p style="max-width: 500px; margin: 0 auto 1.5rem;">One page. Designed. Boardroom-ready. Everything you need to make the case internally.</p>
-        <a href="media-kit.pdf" class="btn btn--pink" download>Download our Media Kit →</a>
-      </div>
-    </section>
-
-    <!-- ===== BLOCK 8: CHANDA ===== -->
-    <section class="section section--white">
-      <div class="container" style="max-width: 800px;">
-
+      <div class="container" style="max-width:800px;">
         <div class="chanda-block">
           <div class="chanda-photo">
             <img src="chanda.jpg" alt="Chanda Chaudhary, Founder of Jananam Media">
@@ -261,8 +625,9 @@
           <div class="chanda-info">
             <h3>Chanda Chaudhary</h3>
             <p class="chanda-role">Founder, Jananam Media Pvt. Ltd.</p>
-            <blockquote style="margin: 0; font-size: 1rem;">
-              I spent two weeks in Rajasthan before making a single video. Eight years later I'm still learning from her. If you'd like to talk — I'm not difficult to reach.
+            <blockquote style="margin:0; font-size:1rem;">
+              SuperMummy was built by a woman who has never been pregnant.
+              Because sometimes the clearest eyes belong to the witness, not the patient.
             </blockquote>
             <div class="chanda-links">
               <a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn →</a>
@@ -270,7 +635,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -281,7 +645,7 @@
     <div class="container">
       <div class="footer-left">
         <span class="footer-logo">SuperMummy</span>
-        <span class="footer-copy" style="font-size: 1.1rem;">© Jananam Media Pvt. Ltd.</span>
+        <span class="footer-copy" style="font-size:1.1rem;">© Jananam Media Pvt. Ltd.</span>
       </div>
       <ul class="footer-links">
         <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g" target="_blank" rel="noopener">YouTube</a></li>
@@ -293,84 +657,25 @@
     </div>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
   <script>
-    // --- Tab Switching ---
-    function switchTab(e, tabId) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-      e.target.classList.add('active');
-      document.getElementById(tabId).classList.add('active');
-    }
+    document.addEventListener('DOMContentLoaded', function () {
 
-    // --- Growth Chart ---
-    document.addEventListener('DOMContentLoaded', function() {
-      const ctx = document.getElementById('growthChart');
-      if (!ctx || typeof Chart === 'undefined') return;
-
-      const data = SM.growthData;
-
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: data.map(d => d.year),
-          datasets: [{
-            label: 'Annual Views (Crore)',
-            data: data.map(d => d.views),
-            backgroundColor: data.map((d, i) =>
-              i === data.length - 1 ? 'rgba(232, 0, 111, 0.35)' : 'rgba(232, 0, 111, 0.8)'
-            ),
-            borderColor: 'rgba(232, 0, 111, 1)',
-            borderWidth: 1,
-            borderRadius: 6,
-            barPercentage: 0.7,
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: true,
-          aspectRatio: 2.5,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              backgroundColor: '#1A0A10',
-              titleFont: { family: 'Hind', size: 13 },
-              bodyFont: { family: 'Hind', size: 13 },
-              callbacks: {
-                label: function(ctx) {
-                  const v = ctx.parsed.y;
-                  if (v < 1) return (v * 100).toFixed(0) + ' lakh views';
-                  return v.toFixed(2) + ' crore views';
-                }
-              }
-            }
-          },
-          scales: {
-            y: {
-              beginAtZero: true,
-              grid: { color: 'rgba(26,10,16,0.05)' },
-              ticks: {
-                font: { family: 'Hind', size: 12 },
-                color: '#6B5560',
-                callback: function(v) { return v + ' Cr'; }
-              }
-            },
-            x: {
-              grid: { display: false },
-              ticks: {
-                font: { family: 'Hind', size: 12, weight: 500 },
-                color: '#1A0A10'
-              }
-            }
-          }
-        }
-      });
-
-      // --- Populate data fields ---
+      // Populate all data-field elements from SM object
       document.querySelectorAll('[data-field]').forEach(el => {
         const key = el.getAttribute('data-field');
-        if (SM[key]) el.textContent = SM[key];
+        if (SM && SM[key] !== undefined) el.textContent = SM[key];
       });
+
+      // Compute Patna + Lucknow combined vs Tier 1 metros
+      if (SM && SM.topCities && SM.tier1Views) {
+        const patna   = SM.topCities[0].viewsExact;
+        const lucknow = SM.topCities[1].viewsExact;
+        const combined = patna + lucknow;
+        const fmt = n => (n / 1000000).toFixed(1) + ' million';
+        const el = document.getElementById('patna-lucknow-views');
+        if (el) el.textContent = fmt(combined);
+      }
+
     });
   </script>
 
