@@ -21,7 +21,6 @@
 
   <style>
 
-    /* ── SECTION LABEL ── */
     .section-label {
       font-family: var(--font-body, 'Hind', sans-serif);
       font-size: 1rem;
@@ -33,10 +32,7 @@
       display: block;
     }
 
-    /* ── STAT HERO (commanding, not screaming) ── */
-    .stat-hero {
-      margin-bottom: 1.5rem;
-    }
+    .stat-hero { margin-bottom: 1.5rem; }
     .stat-hero__number {
       font-family: var(--font-display, 'Playfair Display', serif);
       font-size: clamp(2.5rem, 6vw, 4rem);
@@ -54,7 +50,6 @@
       line-height: 1.4;
     }
 
-    /* ── GEOGRAPHY ── */
     .geo-block { max-width: 860px; margin: 0 auto; }
     .geo-cities {
       font-family: var(--font-display, 'Playfair Display', serif);
@@ -75,7 +70,6 @@
       margin-bottom: 2rem;
     }
 
-    /* ── GEO CALLOUT — cream, not black ── */
     .geo-callout {
       background: #fff;
       border: 1px solid rgba(232,0,111,0.15);
@@ -104,10 +98,7 @@
       color: var(--dark, #1A0A10);
     }
     .geo-callout__text strong { color: var(--dark, #1A0A10); }
-    .geo-callout__divider {
-      border-left: 1px solid rgba(232,0,111,0.15);
-      padding-left: 2rem;
-    }
+    .geo-callout__divider { border-left: 1px solid rgba(232,0,111,0.15); padding-left: 2rem; }
     @media (max-width: 600px) {
       .geo-callout__divider {
         border-left: none;
@@ -117,7 +108,6 @@
       }
     }
 
-    /* ── STAT PAIR (supporting cards — smaller than hero) ── */
     .stat-pair {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -147,7 +137,6 @@
       color: var(--dark, #1A0A10);
     }
 
-    /* ── SEARCH / METHODOLOGY BLOCKS ── */
     .search-block { max-width: 860px; margin: 0 auto; }
     .methodology-block { max-width: 860px; margin: 0 auto; }
 
@@ -171,7 +160,6 @@
       margin: 2rem 0;
     }
 
-    /* ── YOUTUBE COMMENT CARD ── */
     .yt-comment-wrap { margin: 2.5rem 0; }
     .yt-comment-card {
       background: #0f0f0f;
@@ -213,7 +201,6 @@
       margin-top: 0.6rem;
     }
 
-    /* ── THREE STATS ROW ── */
     .three-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -222,9 +209,7 @@
     }
     @media (max-width: 700px) { .three-stats { grid-template-columns: 1fr; } }
 
-    /* ── PARTNERSHIP BLOCK ── */
     .partnership-block { max-width: 860px; margin: 0 auto; }
-
     .partnership-lead {
       font-family: var(--font-display, 'Playfair Display', serif);
       font-size: clamp(1.4rem, 3vw, 1.9rem);
@@ -292,7 +277,6 @@
     }
     .partner-col--yes .partner-col__label { color: var(--pink, #E8006F); }
     .partner-col--no .partner-col__label { color: rgba(26,10,16,0.4); }
-
     .partner-col ul { list-style: none; padding: 0; margin: 0; }
     .partner-col ul li {
       font-family: var(--font-body, 'Hind', sans-serif);
@@ -304,7 +288,6 @@
     }
     .partner-col ul li:last-child { border-bottom: none; }
 
-    /* ── MEDIA KIT ── */
     .mediakit-section { text-align: center; max-width: 600px; margin: 0 auto; }
     .mediakit-section p {
       font-family: var(--font-body, 'Hind', sans-serif);
@@ -314,16 +297,22 @@
       line-height: 1.6;
     }
 
-    /* ── CHANDA ── */
+    /* ── CHANDA — photo clipped by the container, not the img tag ── */
     .chanda-block { display: flex; gap: 2rem; align-items: flex-start; }
-    .chanda-photo img {
-      width: 120px !important;
-      height: 120px !important;
-      border-radius: 50% !important;
-      object-fit: cover !important;
-      display: block !important;
+    .chanda-photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
     }
-    
+    .chanda-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: 0;
+    }
     .chanda-info h3 {
       font-family: var(--font-display, 'Playfair Display', serif);
       font-size: 1.4rem;
@@ -374,7 +363,8 @@
       <a href="index.html" class="nav-logo" aria-label="SuperMummy home">
         <img src="logo.png" alt="SuperMummy" style="height: 80px;">
       </a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Toggle menu"
+        onclick="document.querySelector('.nav-links').classList.toggle('open')">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
@@ -641,60 +631,4 @@
           </div>
           <div class="chanda-info">
             <h3>Chanda Chaudhary</h3>
-            <p class="chanda-role">Founder, Jananam Media Pvt. Ltd.</p>
-            <blockquote style="margin:0; font-size:1rem;">
-              SuperMummy was built by a woman who has never been pregnant.
-              Because sometimes the clearest eyes belong to the witness, not the patient.
-            </blockquote>
-            <div class="chanda-links">
-              <a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn →</a>
-              <a href="mailto:chanda@jananam.co">chanda@jananam.co</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-left">
-        <span class="footer-logo">SuperMummy</span>
-        <span class="footer-copy" style="font-size:1.1rem;">© Jananam Media Pvt. Ltd.</span>
-      </div>
-      <ul class="footer-links">
-        <li><a href="https://www.youtube.com/channel/UCXbpISwEehv_dUNr8FMWK8g" target="_blank" rel="noopener">YouTube</a></li>
-        <li><a href="https://www.facebook.com/share/1888aEXNYU/" target="_blank" rel="noopener">Facebook</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://jananam.co" target="_blank" rel="noopener">Jananam</a></li>
-      </ul>
-    </div>
-  </footer>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-
-      // Populate all data-field elements from SM object
-      document.querySelectorAll('[data-field]').forEach(el => {
-        const key = el.getAttribute('data-field');
-        if (SM && SM[key] !== undefined) el.textContent = SM[key];
-      });
-
-      // Compute Patna + Lucknow combined vs Tier 1 metros
-      if (SM && SM.topCities && SM.tier1Views) {
-        const patna   = SM.topCities[0].viewsExact;
-        const lucknow = SM.topCities[1].viewsExact;
-        const combined = patna + lucknow;
-        const fmt = n => (n / 1000000).toFixed(1) + ' million';
-        const el = document.getElementById('patna-lucknow-views');
-        if (el) el.textContent = fmt(combined);
-      }
-
-    });
-  </script>
-
-</body>
-</html>
+            <p class="chanda-role">Founder, Jananam Media Pvt. Ltd.
