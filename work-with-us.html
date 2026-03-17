@@ -306,15 +306,19 @@
       text-transform: uppercase;
       margin-bottom: 0.75rem;
     }
-    .chanda-links { display: flex; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    /* CHANGED: larger, more prominent contact links */
+    .chanda-links { display: flex; gap: 1.5rem; margin-top: 1.25rem; flex-wrap: wrap; align-items: center; }
     .chanda-links a {
       font-family: var(--font-body, 'Hind', sans-serif);
-      font-size: 0.9rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: var(--pink, #E8006F);
       text-decoration: none;
+      border-bottom: 2px solid rgba(232,0,111,0.3);
+      padding-bottom: 2px;
+      transition: border-color 0.2s ease;
     }
-    .chanda-links a:hover { text-decoration: underline; }
+    .chanda-links a:hover { border-color: var(--pink, #E8006F); }
     @media (max-width: 600px) { .chanda-block { flex-direction: column; } }
   </style>
 
@@ -561,6 +565,7 @@
       </div>
     </section>
 
+    <!-- CHANGED: Chanda block — Option 3 copy, larger contact links -->
     <section class="section section--cream">
       <div class="container" style="max-width:800px;">
         <div class="chanda-block">
@@ -570,10 +575,9 @@
           <div class="chanda-info">
             <h3>Chanda Chaudhary</h3>
             <p class="chanda-role">Founder, Jananam Media Pvt. Ltd.</p>
-            <blockquote style="margin:0; font-size:1rem;">
-              SuperMummy was built by a woman who has never been pregnant.
-              Because sometimes the clearest eyes belong to the witness, not the patient.
-            </blockquote>
+            <p style="font-family:'Hind', sans-serif; font-size:1rem; line-height:1.75; color:var(--dark, #1A0A10); margin:0;">
+              Chanda Chaudhary. Founder, Jananam Media. Twenty-five years in media across India, Singapore, Dubai and London. Eight years building SuperMummy. She is not new to this conversation.
+            </p>
             <div class="chanda-links">
               <a href="https://www.linkedin.com/in/chandachaudhary/" target="_blank" rel="noopener">LinkedIn →</a>
               <a href="mailto:chanda@jananam.co">chanda@jananam.co</a>
