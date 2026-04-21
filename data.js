@@ -2,40 +2,40 @@
 // SuperMummy — data.js
 // Update this file monthly. Change numbers, save, push to GitHub.
 // Two minutes. Never touch the design.
-// Last updated: March 17, 2026
+// Last updated: April 21, 2026
 // All numbers verified from YouTube Studio Advanced mode exports.
 // ============================================================
 
 const SM = {
 
   // --- Meta ---
-  lastUpdated:          'March 17, 2026',
+  lastUpdated:          'April 21, 2026',
   yearFounded:          '2018',
 
   // --- Channel Numbers (update monthly) ---
-  totalViews:           '10.6 करोड़+',
-  totalViewsEn:         '10.6 Crore+',
+  totalViews:           '12.0 करोड़+',
+  totalViewsEn:         '12.0 Crore+',
   monthlyViews:         '1.15 करोड़',
   monthlyViewsEn:       '1.15 Crore',
   monthlyViewsExact:    '1.15 Crore',
-  subscribers:          '1.49 लाख',
-  subscribersEn:        '1.49 Lakh',
-  subscribersExact:     '1,49,628',
+  subscribers:          '1.57 लाख',
+  subscribersEn:        '1.57 Lakh',
+  subscribersExact:     '1,57,072',
   totalVideos:          '900+',
   yearsActive:          '8',
 
-  // --- 28-Day Window (Feb 16 – Mar 15, 2026) ---
-  window28Days:         'Feb 16 – Mar 15, 2026',
-  dailyAvgViews:        '4.09 लाख',
-  dailyAvgViewsEn:      '4.09 Lakh',
-  dailyAvgViewsExact:   '4,09,124',
+  // --- 28-Day Window (Mar 23 – Apr 19, 2026) ---
+  window28Days:         'Mar 23 – Apr 19, 2026',
+  dailyAvgViews:        '4.14 लाख',
+  dailyAvgViewsEn:      '4.14 Lakh',
+  dailyAvgViewsExact:   '4,14,261',
   peakDay:              '4.68 लाख',
   peakDayEn:            '4.68 Lakh',
   peakDayExact:         '4,68,229',
   peakDayDate:          'March 12, 2026',
-  watchHours28d:        '39,816',
-  newSubs28d:           '6,204',
-  revenue28d:           '$143.39',
+  watchHours28d:        '38,357',
+  newSubs28d:           '6,215',
+  revenue28d:           '$128.71',
 
   // --- Growth (YoY January daily average) ---
   dailyAvgJan2024:      '4,222',
@@ -44,68 +44,68 @@ const SM = {
   yoyGrowth2425:        '+372%',
   yoyGrowth2526:        '+1,516%',
   momGrowth:            '+16.3%',
-  annualRunRate:        '14.9 Crore views/year',
+  annualRunRate:        '15.1 Crore views/year',
 
-  // --- Traffic Sources (28-day, Feb 16 – Mar 15, 2026) ---
-  searchViewsPct:       '80.4%',
-  searchViewsExact:     '92 Lakh+',
-  searchViewsEn:        '9.2 million',
-  searchViewsLakh:      '92 Lakh+',
+  // --- Traffic Sources (28-day, Mar 23 – Apr 19, 2026) ---
+  searchViewsPct:       '85.0%',
+  searchViewsExact:     '98 Lakh+',
+  searchViewsEn:        '9.8 million',
+  searchViewsLakh:      '98 Lakh+',
   searchRetention:      '84.98%',
-  searchCTR:            '7.75%',
-  searchWatchHours:     '29,991',
-  shortsFeedPct:        '13.2%',
-  shortsFeedViews:      '15.07 Lakh',
-  browsePct:            '5.3%',
-  browseViews:          '6.08 Lakh',
-  suggestedViewsPct:    '0.5%',
-  suggestedViewsExact:  '56,532',
-  suggestedAVD:         '2:16',
+  searchCTR:            '7.39%',
+  searchWatchHours:     '30,631',
+  shortsFeedPct:        '10.5%',
+  shortsFeedViews:      '12.20 Lakh',
+  browsePct:            '3.4%',
+  browseViews:          '3.95 Lakh',
+  suggestedViewsPct:    '0.4%',
+  suggestedViewsExact:  '51,337',
+  suggestedAVD:         '2:24',
 
-  // --- Audience Geography (28-day) ---
-  nonMetroPct:          '90.5%',
-  indiaPct:             '97.11%',
-  indiaViews:           '1.11 Crore',
-  pakistanPct:          '1.25%',
-  nepalPct:             '0.85%',
+  // --- Audience Geography (28-day, Mar 23 – Apr 19, 2026) ---
+  nonMetroPct:          '90.9%',
+  indiaPct:             '96.8%',
+  indiaViews:           '1.12 Crore',
+  pakistanPct:          '1.3%',
+  nepalPct:             '0.9%',
 
-  // --- India Tier Breakdown (28-day, city-level export) ---
-  tier1Pct:             '9.5%',
-  tier1Views:           '10.59 Lakh',
-  tier2Pct:             '48.5%',
-  tier2Views:           '53.89 Lakh',
-  tier3Pct:             '11.8%',
-  tier3Views:           '13.16 Lakh',
-  invisibleIndiaPct:    '30%',
-  invisibleIndiaExact:  '30.1%',
-  invisibleIndiaViews:  '33.48 Lakh',
+  // --- India Tier Breakdown (28-day, city-level export, Mar 23 – Apr 19, 2026) ---
+  tier1Pct:             '9.1%',
+  tier1Views:           '10.22 Lakh',
+  tier2Pct:             '38.8%',
+  tier2Views:           '43.62 Lakh',
+  tier3Pct:             '21.4%',
+  tier3Views:           '23.99 Lakh',
+  invisibleIndiaPct:    '31%',
+  invisibleIndiaExact:  '30.7%',
+  invisibleIndiaViews:  '34.46 Lakh',
   // Note: Invisible India = views YouTube cannot attribute to any named city.
   // Calculated as: India total views minus sum of all 150 named cities in export.
   // This is the correct, data-derived figure as of March 15, 2026.
   // An earlier figure of 64% cited on this website was unverified and has been corrected.
 
-  // --- Hindi Belt (UP+BR+MP+RJ+HR+UK+JH+CG+HP combined) ---
-  hindiBeltPct:         '58.0%',
-  hindiBeltViews:       '64.45 Lakh',
+  // --- Hindi Belt (UP+BR+MP+RJ+HR+UK+JH+CG+HP combined, Mar 23 – Apr 19, 2026) ---
+  hindiBeltPct:         '45.3%',
+  hindiBeltViews:       '50.85 Lakh',
 
   // --- Patna + Lucknow Combined (for Work With Us + Media Kit) ---
-  patnaLucknowViews:    '21.4 Lakh',
+  patnaLucknowViews:    '23.69 Lakh',
 
-  // --- India State Breakdown (top states, 28-day) ---
-  stateUP:              '27.95 Lakh',
-  stateUPPct:           '25.15%',
-  stateBihar:           '13.17 Lakh',
-  stateBiharPct:        '11.85%',
-  stateMH:              '12.13 Lakh',
-  stateMHPct:           '10.92%',
-  stateMP:              '9.85 Lakh',
-  stateMPPct:           '8.86%',
-  stateRJ:              '7.14 Lakh',
-  stateRJPct:           '6.43%',
-  stateGJ:              '6.24 Lakh',
-  stateGJPct:           '5.61%',
-  stateDL:              '5.37 Lakh',
-  stateDLPct:           '4.83%',
+  // --- India State Breakdown (top states, 28-day, Mar 23 – Apr 19, 2026) ---
+  stateUP:              '22.24 Lakh',
+  stateUPPct:           '19.81%',
+  stateBihar:           '12.93 Lakh',
+  stateBiharPct:        '11.52%',
+  stateMH:              '7.66 Lakh',
+  stateMHPct:           '6.83%',
+  stateMP:              '7.93 Lakh',
+  stateMPPct:           '7.07%',
+  stateRJ:              '5.16 Lakh',
+  stateRJPct:           '4.60%',
+  stateGJ:              '4.35 Lakh',
+  stateGJPct:           '3.88%',
+  stateDL:              '5.13 Lakh',
+  stateDLPct:           '4.57%',
 
   // --- Shorts Performance (28-day) ---
   shortsCount:          '423',
@@ -134,7 +134,7 @@ const SM = {
 
   // --- Lifetime Revenue ---
   lifetimeRevenue:      '$3,010.66',
-  lifetimeViews:        '10.6 Crore',
+  lifetimeViews:        '12.0 Crore',
   lifetimeRPM:          '$0.028',
 
   // --- Growth Chart Data (annual views in crores) ---
@@ -147,7 +147,7 @@ const SM = {
     { year: '2023', views: 0.19 },
     { year: '2024', views: 0.21 },
     { year: '2025', views: 6.67 },
-    { year: '2026*', views: 2.69 }
+    { year: '2026*', views: 4.13 }
   ],
 
   // --- Market Data (sourced — do not approximate) ---
@@ -157,23 +157,23 @@ const SM = {
   hindiSpeakers:        '60 Crore',
   dailyPregnancies:     '~80,000',
 
-  // --- Top Cities (last 28 days, Feb 16 – Mar 15, 2026) ---
+  // --- Top Cities (last 28 days, Mar 23 – Apr 19, 2026) ---
   topCities: [
-    { rank: 1,  city: 'Patna',      state: 'Bihar',       views: '10.99 Lakh', viewsExact: 1099432 },
-    { rank: 2,  city: 'Lucknow',    state: 'UP',          views: '10.39 Lakh', viewsExact: 1038915 },
-    { rank: 3,  city: 'Indore',     state: 'MP',          views: '5.99 Lakh',  viewsExact: 598897  },
-    { rank: 4,  city: 'Agra',       state: 'UP',          views: '5.51 Lakh',  viewsExact: 551125  },
-    { rank: 5,  city: 'Delhi',      state: 'Delhi',       views: '4.99 Lakh',  viewsExact: 499172  },
-    { rank: 6,  city: 'Jaipur',     state: 'Rajasthan',   views: '3.84 Lakh',  viewsExact: 384248  },
-    { rank: 7,  city: 'Pune',       state: 'Maharashtra', views: '3.67 Lakh',  viewsExact: 367169  },
-    { rank: 8,  city: 'Ahmedabad',  state: 'Gujarat',     views: '2.95 Lakh',  viewsExact: 295022  },
-    { rank: 9,  city: 'Nagpur',     state: 'Maharashtra', views: '1.97 Lakh',  viewsExact: 197001  },
-    { rank: 10, city: 'Ludhiana',   state: 'Punjab',      views: '1.96 Lakh',  viewsExact: 195662  },
-    { rank: 11, city: 'Mumbai',     state: 'Maharashtra', views: '1.95 Lakh',  viewsExact: 195278  },
-    { rank: 12, city: 'Bhopal',     state: 'MP',          views: '1.88 Lakh',  viewsExact: 188398  },
-    { rank: 13, city: 'Varanasi',   state: 'UP',          views: '1.75 Lakh',  viewsExact: 174648  },
-    { rank: 14, city: 'Bengaluru',  state: 'Karnataka',   views: '1.47 Lakh',  viewsExact: 147289  },
-    { rank: 15, city: 'Meerut',     state: 'UP',          views: '1.42 Lakh',  viewsExact: 141658  }
+    { rank: 1,  city: 'Patna',       state: 'Bihar',       views: '12.68 Lakh', viewsExact: 1268878 },
+    { rank: 2,  city: 'Lucknow',     state: 'UP',          views: '11.00 Lakh', viewsExact: 1100733 },
+    { rank: 3,  city: 'Indore',      state: 'MP',          views: '6.03 Lakh',  viewsExact: 603229  },
+    { rank: 4,  city: 'Agra',        state: 'UP',          views: '5.50 Lakh',  viewsExact: 550729  },
+    { rank: 5,  city: 'Delhi',       state: 'Delhi',       views: '4.97 Lakh',  viewsExact: 497374  },
+    { rank: 6,  city: 'Jaipur',      state: 'Rajasthan',   views: '3.82 Lakh',  viewsExact: 382886  },
+    { rank: 7,  city: 'Pune',        state: 'Maharashtra', views: '3.25 Lakh',  viewsExact: 325144  },
+    { rank: 8,  city: 'Ahmedabad',   state: 'Gujarat',     views: '2.88 Lakh',  viewsExact: 288037  },
+    { rank: 9,  city: 'Nagpur',      state: 'Maharashtra', views: '1.91 Lakh',  viewsExact: 191786  },
+    { rank: 10, city: 'Ludhiana',    state: 'Punjab',      views: '1.91 Lakh',  viewsExact: 191055  },
+    { rank: 11, city: 'Mumbai',      state: 'Maharashtra', views: '1.85 Lakh',  viewsExact: 185804  },
+    { rank: 12, city: 'Varanasi',    state: 'UP',          views: '1.78 Lakh',  viewsExact: 178423  },
+    { rank: 13, city: 'Bhopal',      state: 'MP',          views: '1.71 Lakh',  viewsExact: 171798  },
+    { rank: 14, city: 'Bhubaneswar', state: 'Odisha',      views: '1.39 Lakh',  viewsExact: 139788  },
+    { rank: 15, city: 'Meerut',      state: 'UP',          views: '1.37 Lakh',  viewsExact: 137450  }
   ],
 
   // --- Top Videos (lifetime views) ---
