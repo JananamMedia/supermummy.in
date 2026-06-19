@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SuperMummy — India's Leading Hindi Pregnancy Health Channel | Jananam Media</title>
-  <meta name="description" content="India's most trusted Hindi-language pregnancy health YouTube channel. 900+ doctor-verified videos. Every question a pregnant woman has — answered in Hindi, free, always. Built by Jananam Media Pvt. Ltd., Goa.">
+  <title>SuperMummy — Trusted Hindi Pregnancy Channel | Jananam Media</title>
+  <meta name="description" content="A trusted Hindi-language pregnancy health YouTube channel. 900+ doctor-verified videos. Every question a pregnant woman has — answered in Hindi, free, always. Built by Jananam Media Pvt. Ltd., Goa.">
   <meta name="keywords" content="SuperMummy, pregnancy health Hindi, Hindi pregnancy videos, doctor verified pregnancy, Jananam Media, pregnancy YouTube India">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="SuperMummy — India's Leading Hindi Pregnancy Health Channel">
+  <meta property="og:title" content="SuperMummy — Trusted Hindi Pregnancy Channel">
   <meta property="og:description" content="900+ doctor-verified pregnancy health videos in Hindi. 10.6 crore+ views. Free, always.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://supermummy.in">
@@ -16,7 +16,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SuperMummy — India's Leading Hindi Pregnancy Health Channel">
+  <meta name="twitter:title" content="SuperMummy — Trusted Hindi Pregnancy Channel">
   <meta name="twitter:description" content="900+ doctor-verified pregnancy health videos in Hindi. Free, always.">
 
   <!-- Language -->
@@ -35,7 +35,7 @@
     "name": "SuperMummy",
     "alternateName": "Super Mummy",
     "url": "https://supermummy.in",
-    "description": "India's leading Hindi-language pregnancy health YouTube channel. 900+ doctor-verified videos.",
+    "description": "A trusted Hindi-language pregnancy health YouTube channel. 900+ doctor-verified videos.",
     "foundingDate": "2018",
     "founder": {
       "@type": "Person",
@@ -152,23 +152,24 @@
   <main>
 
     <!-- ===== BLOCK 1: NUMBERS ===== -->
+    <!-- Numbers below are baked as plain text so crawlers and AI read them. Update monthly (source values mirrored in data.js). -->
     <section class="about-lede">
       <div class="container">
         <div class="about-lede-grid">
           <div class="about-lede-stat">
-            <span class="about-lede-number" id="stat-views"></span>
+            <span class="about-lede-number" id="stat-views">10.6 Crore+</span>
             <span class="about-lede-label">Total Views</span>
           </div>
           <div class="about-lede-stat">
-            <span class="about-lede-number" id="stat-videos"></span>
+            <span class="about-lede-number" id="stat-videos">900+</span>
             <span class="about-lede-label">Doctor-Verified Videos</span>
           </div>
           <div class="about-lede-stat">
-            <span class="about-lede-number" id="stat-years"></span>
+            <span class="about-lede-number" id="stat-years">8 Years</span>
             <span class="about-lede-label">Years Continuously<br>Doctor-Verified</span>
           </div>
           <div class="about-lede-stat">
-            <span class="about-lede-number" id="stat-subs"></span>
+            <span class="about-lede-number" id="stat-subs">148K+</span>
             <span class="about-lede-label">Subscribers &amp; Growing</span>
           </div>
         </div>
@@ -222,13 +223,14 @@
         <p class="her-bharat-eyebrow">The Audience</p>
 
         <p class="her-bharat-stat">
+          <!-- searchViewsLakh: left blank pending confirmed figure from data.js; data.js fills it for browsers as fallback -->
           <span id="stat-search-views"></span> times last month,
           <span>someone searched for a pregnancy question on YouTube and watched a SuperMummy video.</span>
         </p>
 
         <p class="her-bharat-cities">
           Patna. Lucknow. Indore. Agra. Varanasi.<br>
-          And then — beyond the analytics — <span id="stat-invisible-pct"></span>% of our viewers<br>
+          And then — beyond the analytics — <span id="stat-invisible-pct">30.1</span>% of our viewers<br>
           come from towns that don't appear in any dashboard.
         </p>
 
@@ -299,20 +301,25 @@
     </div>
   </footer>
 
-  <!-- ===== DATA INJECTION FROM data.js ===== -->
+  <!-- ===== DATA INJECTION FROM data.js (fallback only — baked values above take precedence) ===== -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       if (typeof SM === 'undefined') return;
 
-      // Block 1 — four stats
-      document.getElementById('stat-views').textContent  = SM.totalViewsEn;
-      document.getElementById('stat-videos').textContent = SM.totalVideos;
-      document.getElementById('stat-years').textContent  = SM.yearsActive + ' Years';
-      document.getElementById('stat-subs').textContent   = SM.subscribersEn;
+      function fillIfEmpty(id, value) {
+        var el = document.getElementById(id);
+        if (el && !el.textContent.trim()) el.textContent = value;
+      }
+
+      // Block 1 — four stats (only fill if the baked text is missing)
+      fillIfEmpty('stat-views',  SM.totalViewsEn);
+      fillIfEmpty('stat-videos', SM.totalVideos);
+      fillIfEmpty('stat-years',  SM.yearsActive + ' Years');
+      fillIfEmpty('stat-subs',   SM.subscribersEn);
 
       // Block 4 — Her Bharat
-      document.getElementById('stat-search-views').textContent  = SM.searchViewsLakh;
-      document.getElementById('stat-invisible-pct').textContent = SM.invisibleIndiaExact;
+      fillIfEmpty('stat-search-views',  SM.searchViewsLakh);
+      fillIfEmpty('stat-invisible-pct', SM.invisibleIndiaExact);
     });
   </script>
 
