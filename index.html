@@ -9,7 +9,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="SuperMummy — Trusted Hindi Pregnancy Channel">
-  <meta property="og:description" content="900+ doctor-verified pregnancy health videos in Hindi. 10.6 crore+ views. Free, always.">
+  <meta property="og:description" content="900+ doctor-verified pregnancy health videos in Hindi. 12.9 crore+ views. Free, always.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://supermummy.in">
   <meta property="og:site_name" content="SuperMummy">
@@ -157,7 +157,7 @@
       <div class="container">
         <div class="about-lede-grid">
           <div class="about-lede-stat">
-            <span class="about-lede-number" id="stat-views">10.6 Crore+</span>
+            <span class="about-lede-number" id="stat-views">12.9 Crore+</span>
             <span class="about-lede-label">Total Views</span>
           </div>
           <div class="about-lede-stat">
@@ -169,7 +169,7 @@
             <span class="about-lede-label">Years Continuously<br>Doctor-Verified</span>
           </div>
           <div class="about-lede-stat">
-            <span class="about-lede-number" id="stat-subs">148K+</span>
+            <span class="about-lede-number" id="stat-subs">1.61 Lakh+</span>
             <span class="about-lede-label">Subscribers &amp; Growing</span>
           </div>
         </div>
@@ -223,14 +223,13 @@
         <p class="her-bharat-eyebrow">The Audience</p>
 
         <p class="her-bharat-stat">
-          <!-- searchViewsLakh: left blank pending confirmed figure from data.js; data.js fills it for browsers as fallback -->
-          <span id="stat-search-views"></span> times last month,
+          <span id="stat-search-views">94.79 Lakh+</span> times last month,
           <span>someone searched for a pregnancy question on YouTube and watched a SuperMummy video.</span>
         </p>
 
         <p class="her-bharat-cities">
           Patna. Lucknow. Indore. Agra. Varanasi.<br>
-          And then — beyond the analytics — <span id="stat-invisible-pct">30.1</span>% of our viewers<br>
+          And then — beyond the analytics — <span id="stat-invisible-pct">32.3</span>% of our viewers<br>
           come from towns that don't appear in any dashboard.
         </p>
 
@@ -311,13 +310,11 @@
         if (el && !el.textContent.trim()) el.textContent = value;
       }
 
-      // Block 1 — four stats (only fill if the baked text is missing)
       fillIfEmpty('stat-views',  SM.totalViewsEn);
       fillIfEmpty('stat-videos', SM.totalVideos);
       fillIfEmpty('stat-years',  SM.yearsActive + ' Years');
       fillIfEmpty('stat-subs',   SM.subscribersEn);
 
-      // Block 4 — Her Bharat
       fillIfEmpty('stat-search-views',  SM.searchViewsLakh);
       fillIfEmpty('stat-invisible-pct', SM.invisibleIndiaExact);
     });
