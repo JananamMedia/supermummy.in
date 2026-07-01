@@ -40,10 +40,37 @@
     "publisher": {
       "@type": "Organization",
       "name": "Jananam Media Pvt. Ltd.",
-      "url": "https://jananam.co"
+      "url": "https://jananam.co",
+      "brand": { "@type": "Brand", "name": "SuperMummy" }
     }
   }
   </script>
+
+  <style>
+    .sm-about {
+      background: rgba(232,0,111,0.05);
+      border: 1px solid rgba(232,0,111,0.18);
+      border-radius: 12px; padding: 1.1rem 1.35rem;
+      max-width: 800px; margin: 0 auto;
+    }
+    .sm-about__title {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--pink, #E8006F); margin-bottom: 0.6rem;
+    }
+    .sm-about p {
+      font-family: var(--font-hindi, 'Hind', sans-serif);
+      font-size: 0.95rem; line-height: 1.75; color: var(--dark, #1A0A10);
+      margin: 0 0 0.6rem 0;
+    }
+    .sm-about p.en {
+      font-family: var(--font-body, 'Hind', sans-serif);
+      font-size: 0.85rem; line-height: 1.7; color: rgba(26,10,16,0.62);
+      font-style: italic; margin-bottom: 0;
+    }
+    .sm-about a { color: var(--pink, #E8006F); font-weight: 600; text-decoration: none; }
+    .sm-about a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body class="hindi">
 
@@ -83,6 +110,17 @@
            class="btn btn--white">
           Channel देखें →
         </a>
+      </div>
+    </section>
+
+    <!-- ===== OWNERSHIP STATEMENT — appears high on every page ===== -->
+    <section class="section section--white" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="sm-about">
+          <p class="sm-about__title">SuperMummy — Jananam Media Pvt. Ltd. की एक पहल</p>
+          <p>SuperMummy, <a href="https://jananam.co" target="_blank" rel="noopener">Jananam Media Pvt. Ltd.</a> की एक पहल है — जटिल मेडिकल जानकारी, आसान भाषा में, हिंदीभाषी भारत की माँओं के लिए। हमारा मकसद है प्रेगनेंसी से जुड़े सवालों के डॉक्टर-समर्थित जवाब पहुँचाना। पिछले आठ सालों में कई डॉक्टरों ने हमें अपना बहुमूल्य समय दिया है, और हम उन सबके दिल से आभारी हैं। पर याद रखें — हर प्रेगनेंसी अलग होती है। यहाँ दी गई जानकारी को एक साथी की तरह लें, अपने डॉक्टर की सलाह की जगह नहीं। इस पूरे सफ़र में आपके डॉक्टर ही आपके सबसे सच्चे दोस्त हैं।</p>
+          <p class="en">SuperMummy is an initiative of <a href="https://jananam.co" target="_blank" rel="noopener">Jananam Media Pvt. Ltd.</a>: complicated medical advice, explained simply, for mothers across Hindi-speaking India — doctor-backed answers to the questions of pregnancy. Over the past eight years many doctors have generously given us their time, and we remain deeply grateful to each of them. Please remember: every pregnancy is unique. Use the guidance here as a companion, not a substitute for your own doctor — who is your truest friend through this journey.</p>
+        </div>
       </div>
     </section>
 
@@ -206,8 +244,8 @@
             <div class="saveable-label">क्या खाएँ, क्या नहीं</div>
           </div>
           <div class="saveable-card">
-            <img src="SuperMummy_5_Pregnancy_Red_Flags.jpg" alt="प्रेगनेंसी में ख़तरे के संकेत" loading="lazy">
-            <div class="saveable-label">⚠️ ख़तरे के संकेत — प्रेगनेंसी</div>
+            <img src="SuperMummy_5_Pregnancy_Red_Flags.jpg" alt="प्रेगनेंसी में ध्यान देने वाले संकेत" loading="lazy">
+            <div class="saveable-label">ध्यान देने वाले संकेत — प्रेगनेंसी</div>
           </div>
         </div>
 
@@ -229,8 +267,8 @@
 
         <div style="max-width: 360px; margin: 0 auto;">
           <div class="saveable-card">
-            <img src="SuperMummy_6_Postpartum_Red_Flags.jpg" alt="डिलीवरी के बाद ख़तरे के संकेत" loading="lazy">
-            <div class="saveable-label">⚠️ ख़तरे के संकेत — डिलीवरी के बाद</div>
+            <img src="SuperMummy_6_Postpartum_Red_Flags.jpg" alt="डिलीवरी के बाद ध्यान देने वाले संकेत" loading="lazy">
+            <div class="saveable-label">ध्यान देने वाले संकेत — डिलीवरी के बाद</div>
           </div>
         </div>
 
@@ -362,23 +400,17 @@
         if (el && !el.textContent.trim() && value !== undefined) el.textContent = value;
       }
 
-      // --- All data-field elements ---
       document.querySelectorAll('[data-field]').forEach(function (el) {
         setIfEmpty(el, SM[el.getAttribute('data-field')]);
       });
 
-      // --- "2018 से डॉक्टर-verified" stat ---
       setIfEmpty(document.getElementById('stat-years-founded'), SM.yearFounded);
       setIfEmpty(document.getElementById('stat-note-founded'), SM.yearFounded + ' से लगातार');
-
-      // --- "... तक" notes ---
       setIfEmpty(document.getElementById('stat-note-updated-1'), SM.lastUpdated + ' तक');
       setIfEmpty(document.getElementById('stat-note-updated-2'), SM.lastUpdated + ' तक');
-
-      // --- Top videos date ---
       setIfEmpty(document.getElementById('top-videos-date'), SM.lastUpdated);
 
-      // --- Top 3 videos (only build if not already baked into the HTML) ---
+      // Top 3 videos — only build if not already baked into the HTML.
       var grid = document.getElementById('video-grid-top');
       if (grid && grid.children.length === 0 && SM.topVideos) {
         SM.topVideos.slice(0, 3).forEach(function (video) {
@@ -402,13 +434,11 @@
         });
       }
 
-      // --- WhatsApp links when Sakhi launches ---
       if (SM.whatsapp && SM.whatsapp !== '#') {
         document.querySelectorAll('#whatsapp-cta').forEach(function (el) {
           el.href = SM.whatsapp;
         });
       }
-
     });
   </script>
 
